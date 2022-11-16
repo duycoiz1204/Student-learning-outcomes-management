@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbStudentLearningOutcomesManagementModelStoreContainer" CdmEntityContainer="dbStudentLearningOutcomesManagementEntities">
+    <EntitySetMapping Name="tGiaoViens">
+      <EntityTypeMapping TypeName="dbStudentLearningOutcomesManagementModel.tGiaoVien">
+        <MappingFragment StoreEntitySet="tGiaoVien">
+          <ScalarProperty Name="MaGiaoVien" ColumnName="MaGiaoVien" />
+          <ScalarProperty Name="TenGiaoVien" ColumnName="TenGiaoVien" />
+          <ScalarProperty Name="HocVi" ColumnName="HocVi" />
+          <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+          <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tKetQuas">
+      <EntityTypeMapping TypeName="dbStudentLearningOutcomesManagementModel.tKetQua">
+        <MappingFragment StoreEntitySet="tKetQua">
+          <ScalarProperty Name="MaSinhVien" ColumnName="MaSinhVien" />
+          <ScalarProperty Name="MaKhoaHoc" ColumnName="MaKhoaHoc" />
+          <ScalarProperty Name="LanThi" ColumnName="LanThi" />
+          <ScalarProperty Name="Diem" ColumnName="Diem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tKhoas">
+      <EntityTypeMapping TypeName="dbStudentLearningOutcomesManagementModel.tKhoa">
+        <MappingFragment StoreEntitySet="tKhoa">
+          <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
+          <ScalarProperty Name="TenKhoa" ColumnName="TenKhoa" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tKhoaHocs">
+      <EntityTypeMapping TypeName="dbStudentLearningOutcomesManagementModel.tKhoaHoc">
+        <MappingFragment StoreEntitySet="tKhoaHoc">
+          <ScalarProperty Name="MaKhoaHoc" ColumnName="MaKhoaHoc" />
+          <ScalarProperty Name="MaGiaoVien" ColumnName="MaGiaoVien" />
+          <ScalarProperty Name="MaMonHoc" ColumnName="MaMonHoc" />
+          <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
+          <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tMonHocs">
+      <EntityTypeMapping TypeName="dbStudentLearningOutcomesManagementModel.tMonHoc">
+        <MappingFragment StoreEntitySet="tMonHoc">
+          <ScalarProperty Name="MaMonHoc" ColumnName="MaMonHoc" />
+          <ScalarProperty Name="TenMonHoc" ColumnName="TenMonHoc" />
+          <ScalarProperty Name="SoTietLyThuyet" ColumnName="SoTietLyThuyet" />
+          <ScalarProperty Name="SoTietThucHanh" ColumnName="SoTietThucHanh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tSinhViens">
+      <EntityTypeMapping TypeName="dbStudentLearningOutcomesManagementModel.tSinhVien">
+        <MappingFragment StoreEntitySet="tSinhVien">
+          <ScalarProperty Name="MaSinhVien" ColumnName="MaSinhVien" />
+          <ScalarProperty Name="HoSinhVien" ColumnName="HoSinhVien" />
+          <ScalarProperty Name="TenSinhVien" ColumnName="TenSinhVien" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="Phai" ColumnName="Phai" />
+          <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

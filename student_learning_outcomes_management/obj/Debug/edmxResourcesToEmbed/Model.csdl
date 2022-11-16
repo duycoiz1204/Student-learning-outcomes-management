@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbStudentLearningOutcomesManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tGiaoVien">
+    <Key>
+      <PropertyRef Name="MaGiaoVien" />
+    </Key>
+    <Property Name="MaGiaoVien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenGiaoVien" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="HocVi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaKhoa" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="tKhoa" Relationship="Self.FK__tGiaoVien__MaKho__2B3F6F97" FromRole="tGiaoVien" ToRole="tKhoa" />
+    <NavigationProperty Name="tKhoaHocs" Relationship="Self.FK__tKhoaHoc__MaGiao__2E1BDC42" FromRole="tGiaoVien" ToRole="tKhoaHoc" />
+  </EntityType>
+  <EntityType Name="tKetQua">
+    <Key>
+      <PropertyRef Name="MaSinhVien" />
+      <PropertyRef Name="MaKhoaHoc" />
+      <PropertyRef Name="LanThi" />
+    </Key>
+    <Property Name="MaSinhVien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaKhoaHoc" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="LanThi" Type="Int32" Nullable="false" />
+    <Property Name="Diem" Type="Double" />
+    <NavigationProperty Name="tKhoaHoc" Relationship="Self.FK__tKetQua__MaKhoaH__32E0915F" FromRole="tKetQua" ToRole="tKhoaHoc" />
+    <NavigationProperty Name="tSinhVien" Relationship="Self.FK__tKetQua__MaSinhV__31EC6D26" FromRole="tKetQua" ToRole="tSinhVien" />
+  </EntityType>
+  <EntityType Name="tKhoa">
+    <Key>
+      <PropertyRef Name="MaKhoa" />
+    </Key>
+    <Property Name="MaKhoa" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenKhoa" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DienThoai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="tGiaoViens" Relationship="Self.FK__tGiaoVien__MaKho__2B3F6F97" FromRole="tKhoa" ToRole="tGiaoVien" />
+    <NavigationProperty Name="tSinhViens" Relationship="Self.FK__tSinhVien__MaKho__286302EC" FromRole="tKhoa" ToRole="tSinhVien" />
+  </EntityType>
+  <EntityType Name="tKhoaHoc">
+    <Key>
+      <PropertyRef Name="MaKhoaHoc" />
+    </Key>
+    <Property Name="MaKhoaHoc" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaGiaoVien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MaMonHoc" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="NgayBatDau" Type="DateTime" Precision="0" />
+    <Property Name="NgayKetThuc" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="tGiaoVien" Relationship="Self.FK__tKhoaHoc__MaGiao__2E1BDC42" FromRole="tKhoaHoc" ToRole="tGiaoVien" />
+    <NavigationProperty Name="tKetQuas" Relationship="Self.FK__tKetQua__MaKhoaH__32E0915F" FromRole="tKhoaHoc" ToRole="tKetQua" />
+    <NavigationProperty Name="tMonHoc" Relationship="Self.FK__tKhoaHoc__MaMonH__2F10007B" FromRole="tKhoaHoc" ToRole="tMonHoc" />
+  </EntityType>
+  <EntityType Name="tMonHoc">
+    <Key>
+      <PropertyRef Name="MaMonHoc" />
+    </Key>
+    <Property Name="MaMonHoc" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenMonHoc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SoTietLyThuyet" Type="Int32" />
+    <Property Name="SoTietThucHanh" Type="Int32" />
+    <NavigationProperty Name="tKhoaHocs" Relationship="Self.FK__tKhoaHoc__MaMonH__2F10007B" FromRole="tMonHoc" ToRole="tKhoaHoc" />
+  </EntityType>
+  <EntityType Name="tSinhVien">
+    <Key>
+      <PropertyRef Name="MaSinhVien" />
+    </Key>
+    <Property Name="MaSinhVien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="HoSinhVien" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TenSinhVien" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+    <Property Name="Phai" Type="Boolean" />
+    <Property Name="DienThoai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="MaKhoa" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="tKetQuas" Relationship="Self.FK__tKetQua__MaSinhV__31EC6D26" FromRole="tSinhVien" ToRole="tKetQua" />
+    <NavigationProperty Name="tKhoa" Relationship="Self.FK__tSinhVien__MaKho__286302EC" FromRole="tSinhVien" ToRole="tKhoa" />
+  </EntityType>
+  <Association Name="FK__tGiaoVien__MaKho__2B3F6F97">
+    <End Role="tKhoa" Type="Self.tKhoa" Multiplicity="0..1" />
+    <End Role="tGiaoVien" Type="Self.tGiaoVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tKhoa">
+        <PropertyRef Name="MaKhoa" />
+      </Principal>
+      <Dependent Role="tGiaoVien">
+        <PropertyRef Name="MaKhoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tKhoaHoc__MaGiao__2E1BDC42">
+    <End Role="tGiaoVien" Type="Self.tGiaoVien" Multiplicity="0..1" />
+    <End Role="tKhoaHoc" Type="Self.tKhoaHoc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tGiaoVien">
+        <PropertyRef Name="MaGiaoVien" />
+      </Principal>
+      <Dependent Role="tKhoaHoc">
+        <PropertyRef Name="MaGiaoVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tKetQua__MaKhoaH__32E0915F">
+    <End Role="tKhoaHoc" Type="Self.tKhoaHoc" Multiplicity="1" />
+    <End Role="tKetQua" Type="Self.tKetQua" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tKhoaHoc">
+        <PropertyRef Name="MaKhoaHoc" />
+      </Principal>
+      <Dependent Role="tKetQua">
+        <PropertyRef Name="MaKhoaHoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tKetQua__MaSinhV__31EC6D26">
+    <End Role="tSinhVien" Type="Self.tSinhVien" Multiplicity="1" />
+    <End Role="tKetQua" Type="Self.tKetQua" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tSinhVien">
+        <PropertyRef Name="MaSinhVien" />
+      </Principal>
+      <Dependent Role="tKetQua">
+        <PropertyRef Name="MaSinhVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tSinhVien__MaKho__286302EC">
+    <End Role="tKhoa" Type="Self.tKhoa" Multiplicity="0..1" />
+    <End Role="tSinhVien" Type="Self.tSinhVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tKhoa">
+        <PropertyRef Name="MaKhoa" />
+      </Principal>
+      <Dependent Role="tSinhVien">
+        <PropertyRef Name="MaKhoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tKhoaHoc__MaMonH__2F10007B">
+    <End Role="tMonHoc" Type="Self.tMonHoc" Multiplicity="0..1" />
+    <End Role="tKhoaHoc" Type="Self.tKhoaHoc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tMonHoc">
+        <PropertyRef Name="MaMonHoc" />
+      </Principal>
+      <Dependent Role="tKhoaHoc">
+        <PropertyRef Name="MaMonHoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbStudentLearningOutcomesManagementEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tGiaoViens" EntityType="Self.tGiaoVien" />
+    <EntitySet Name="tKetQuas" EntityType="Self.tKetQua" />
+    <EntitySet Name="tKhoas" EntityType="Self.tKhoa" />
+    <EntitySet Name="tKhoaHocs" EntityType="Self.tKhoaHoc" />
+    <EntitySet Name="tMonHocs" EntityType="Self.tMonHoc" />
+    <EntitySet Name="tSinhViens" EntityType="Self.tSinhVien" />
+    <AssociationSet Name="FK__tGiaoVien__MaKho__2B3F6F97" Association="Self.FK__tGiaoVien__MaKho__2B3F6F97">
+      <End Role="tKhoa" EntitySet="tKhoas" />
+      <End Role="tGiaoVien" EntitySet="tGiaoViens" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tKhoaHoc__MaGiao__2E1BDC42" Association="Self.FK__tKhoaHoc__MaGiao__2E1BDC42">
+      <End Role="tGiaoVien" EntitySet="tGiaoViens" />
+      <End Role="tKhoaHoc" EntitySet="tKhoaHocs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tKetQua__MaKhoaH__32E0915F" Association="Self.FK__tKetQua__MaKhoaH__32E0915F">
+      <End Role="tKhoaHoc" EntitySet="tKhoaHocs" />
+      <End Role="tKetQua" EntitySet="tKetQuas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tKetQua__MaSinhV__31EC6D26" Association="Self.FK__tKetQua__MaSinhV__31EC6D26">
+      <End Role="tSinhVien" EntitySet="tSinhViens" />
+      <End Role="tKetQua" EntitySet="tKetQuas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tSinhVien__MaKho__286302EC" Association="Self.FK__tSinhVien__MaKho__286302EC">
+      <End Role="tKhoa" EntitySet="tKhoas" />
+      <End Role="tSinhVien" EntitySet="tSinhViens" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tKhoaHoc__MaMonH__2F10007B" Association="Self.FK__tKhoaHoc__MaMonH__2F10007B">
+      <End Role="tMonHoc" EntitySet="tMonHocs" />
+      <End Role="tKhoaHoc" EntitySet="tKhoaHocs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
