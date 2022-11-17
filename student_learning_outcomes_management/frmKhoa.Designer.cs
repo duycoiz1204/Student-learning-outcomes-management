@@ -46,7 +46,7 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.tKhoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMaKhoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTenKhoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDiaChi = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -58,7 +58,7 @@
             this.textEditTenKhoa = new DevExpress.XtraEditors.TextEdit();
             this.textEditMaKhoa = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -70,13 +70,13 @@
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tKhoaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditDienThoai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditDiaChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditTenKhoa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditMaKhoa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -145,6 +145,7 @@
             this.barButtonItemUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemUpdate.ImageOptions.Image")));
             this.barButtonItemUpdate.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemUpdate.ImageOptions.LargeImage")));
             this.barButtonItemUpdate.Name = "barButtonItemUpdate";
+            this.barButtonItemUpdate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemUpdate_ItemClick);
             // 
             // barButtonItemDelete
             // 
@@ -161,6 +162,7 @@
             this.barButtonItemCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemCancel.ImageOptions.Image")));
             this.barButtonItemCancel.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemCancel.ImageOptions.LargeImage")));
             this.barButtonItemCancel.Name = "barButtonItemCancel";
+            this.barButtonItemCancel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemCancel_ItemClick);
             // 
             // bar3
             // 
@@ -234,29 +236,31 @@
             // 
             this.gridControl.DataSource = this.tKhoaBindingSource;
             this.gridControl.Location = new System.Drawing.Point(12, 31);
-            this.gridControl.MainView = this.gridView1;
+            this.gridControl.MainView = this.gridView;
             this.gridControl.MenuManager = this.barManager;
             this.gridControl.Name = "gridControl";
             this.gridControl.Size = new System.Drawing.Size(529, 490);
             this.gridControl.TabIndex = 8;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gridView});
             // 
             // tKhoaBindingSource
             // 
             this.tKhoaBindingSource.DataSource = typeof(student_learning_outcomes_management.tKhoa);
             // 
-            // gridView1
+            // gridView
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMaKhoa,
             this.colTenKhoa,
             this.colDiaChi,
             this.colDienThoai,
             this.coltGiaoViens,
             this.coltSinhViens});
-            this.gridView1.GridControl = this.gridControl;
-            this.gridView1.Name = "gridView1";
+            this.gridView.GridControl = this.gridControl;
+            this.gridView.Name = "gridView";
+            this.gridView.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.MouseUp;
+            this.gridView.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView_RowClick);
             // 
             // colMaKhoa
             // 
@@ -310,6 +314,7 @@
             // 
             // textEditDienThoai
             // 
+            this.textEditDienThoai.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.tKhoaBindingSource, "DienThoai", true));
             this.textEditDienThoai.Location = new System.Drawing.Point(682, 170);
             this.textEditDienThoai.MenuManager = this.barManager;
             this.textEditDienThoai.Name = "textEditDienThoai";
@@ -319,6 +324,7 @@
             // 
             // textEditDiaChi
             // 
+            this.textEditDiaChi.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.tKhoaBindingSource, "DiaChi", true));
             this.textEditDiaChi.Location = new System.Drawing.Point(682, 132);
             this.textEditDiaChi.MenuManager = this.barManager;
             this.textEditDiaChi.Name = "textEditDiaChi";
@@ -328,6 +334,7 @@
             // 
             // textEditTenKhoa
             // 
+            this.textEditTenKhoa.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.tKhoaBindingSource, "TenKhoa", true));
             this.textEditTenKhoa.Location = new System.Drawing.Point(682, 94);
             this.textEditTenKhoa.MenuManager = this.barManager;
             this.textEditTenKhoa.Name = "textEditTenKhoa";
@@ -337,6 +344,7 @@
             // 
             // textEditMaKhoa
             // 
+            this.textEditMaKhoa.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.tKhoaBindingSource, "MaKhoa", true));
             this.textEditMaKhoa.Location = new System.Drawing.Point(682, 56);
             this.textEditMaKhoa.MenuManager = this.barManager;
             this.textEditMaKhoa.Name = "textEditMaKhoa";
@@ -349,23 +357,23 @@
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlGroup1,
+            this.layoutControlGroup,
             this.layoutControlItem5});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(1092, 533);
             this.Root.TextVisible = false;
             // 
-            // layoutControlGroup1
+            // layoutControlGroup
             // 
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem4,
             this.layoutControlItem1,
             this.layoutControlItem2,
             this.layoutControlItem3});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(533, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(539, 513);
-            this.layoutControlGroup1.Text = "Thông tin Khoa";
+            this.layoutControlGroup.Location = new System.Drawing.Point(533, 0);
+            this.layoutControlGroup.Name = "layoutControlGroup";
+            this.layoutControlGroup.Size = new System.Drawing.Size(539, 513);
+            this.layoutControlGroup.Text = "Thông tin Khoa";
             // 
             // layoutControlItem4
             // 
@@ -441,13 +449,13 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tKhoaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditDienThoai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditDiaChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditTenKhoa.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditMaKhoa.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -480,14 +488,14 @@
         private DevExpress.XtraEditors.TextEdit textEditDiaChi;
         private DevExpress.XtraEditors.TextEdit textEditTenKhoa;
         private DevExpress.XtraEditors.TextEdit textEditMaKhoa;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraGrid.GridControl gridControl;
         private System.Windows.Forms.BindingSource tKhoaBindingSource;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView;
         private DevExpress.XtraGrid.Columns.GridColumn colMaKhoa;
         private DevExpress.XtraGrid.Columns.GridColumn colTenKhoa;
         private DevExpress.XtraGrid.Columns.GridColumn colDiaChi;

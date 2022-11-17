@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.ClipboardSource.SpreadsheetML;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.DXErrorProvider;
+using DevExpress.XtraGrid.Views.Base;
 
 namespace student_learning_outcomes_management
 {
@@ -22,6 +23,7 @@ namespace student_learning_outcomes_management
             InitializeComponent();
 
             barButtonItemUpdate.Enabled = false;
+
             dxErrorProvider.SetIconAlignment(textEditMaKhoa, ErrorIconAlignment.MiddleRight);
             dxErrorProvider.SetIconAlignment(textEditTenKhoa, ErrorIconAlignment.MiddleRight);
             dxErrorProvider.SetIconAlignment(textEditDiaChi, ErrorIconAlignment.MiddleRight);
@@ -115,6 +117,58 @@ namespace student_learning_outcomes_management
                 data.SaveChanges();
                 LoadData();
             }
+        }
+
+        private void gridView_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            textEditMaKhoa.Text = gridView.GetRowCellValue(e.RowHandle, "MaKhoa").ToString();
+            textEditTenKhoa.Text = gridView.GetRowCellValue(e.RowHandle, "TenKhoa").ToString();
+            textEditDiaChi.Text = gridView.GetRowCellValue(e.RowHandle, "DiaChi").ToString();
+            textEditDienThoai.Text = gridView.GetRowCellValue(e.RowHandle, "DienThoai").ToString();
+
+            textEditMaKhoa.ReadOnly = true;
+
+            barButtonItemAdd.Enabled = false;
+            barButtonItemUpdate.Enabled = true;
+        }
+
+        private void barButtonItemUpdate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (validateForm())
+            {
+                updateKhoa();
+                handleCancel();
+            }
+        }
+
+        private void updateKhoa()
+        {
+            tKhoa k = data.tKhoas.FirstOrDefault(x => x.MaKhoa.Contains(textEditMaKhoa.Text.Trim()));
+
+            k.TenKhoa = textEditTenKhoa.Text.Trim();
+            k.DiaChi = textEditDiaChi.Text.Trim();
+            k.DienThoai = textEditDienThoai.Text.Trim();
+
+            data.SaveChanges();
+            LoadData();
+        }
+
+        private void barButtonItemCancel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            handleCancel();
+        }
+
+        private void handleCancel()
+        {
+            textEditMaKhoa.Text = "";
+            textEditTenKhoa.Text = "";
+            textEditDiaChi.Text = "";
+            textEditDienThoai.Text = "";
+
+            textEditMaKhoa.ReadOnly = false;
+
+            barButtonItemAdd.Enabled = true;
+            barButtonItemUpdate.Enabled = false;
         }
     }
 }
