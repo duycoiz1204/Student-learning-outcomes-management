@@ -23,6 +23,7 @@ namespace student_learning_outcomes_management
             InitializeComponent();
 
             barButtonItemUpdate.Enabled = false;
+            barButtonItemDelete.Enabled = false;
 
             dxErrorProvider.SetIconAlignment(textEditMaKhoa, ErrorIconAlignment.MiddleRight);
             dxErrorProvider.SetIconAlignment(textEditTenKhoa, ErrorIconAlignment.MiddleRight);
@@ -116,6 +117,8 @@ namespace student_learning_outcomes_management
                 data.tKhoas.Add(k);
                 data.SaveChanges();
                 LoadData();
+
+                handleCancel();
             }
         }
 
@@ -130,6 +133,7 @@ namespace student_learning_outcomes_management
 
             barButtonItemAdd.Enabled = false;
             barButtonItemUpdate.Enabled = true;
+            barButtonItemDelete.Enabled = true;
         }
 
         private void barButtonItemUpdate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -137,7 +141,6 @@ namespace student_learning_outcomes_management
             if (validateForm())
             {
                 updateKhoa();
-                handleCancel();
             }
         }
 
@@ -151,6 +154,32 @@ namespace student_learning_outcomes_management
 
             data.SaveChanges();
             LoadData();
+
+            handleCancel();
+        }
+
+        private void barButtonItemDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa hay không?", "Xác nhận hành động", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                bool isExistedConstraintRecord = data.tSinhViens.Any(x => x.MaKhoa == textEditMaKhoa.Text.Trim());
+
+                if (isExistedConstraintRecord)
+                {
+                    MessageBox.Show("Xóa thất bại. Dữ liệu đã ràng buộc với bảng khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    tKhoa k = data.tKhoas.FirstOrDefault(x => x.MaKhoa.Contains(textEditMaKhoa.Text.Trim()));
+
+                    data.tKhoas.Remove(k);
+                    data.SaveChanges();
+                    LoadData();
+
+                    handleCancel();
+                    data = new dbStudentLearningOutcomesManagementEntities();
+                }
+            }
         }
 
         private void barButtonItemCancel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -169,6 +198,7 @@ namespace student_learning_outcomes_management
 
             barButtonItemAdd.Enabled = true;
             barButtonItemUpdate.Enabled = false;
+            barButtonItemDelete.Enabled = false;
         }
     }
 }
