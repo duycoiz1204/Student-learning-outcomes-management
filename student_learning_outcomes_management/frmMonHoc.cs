@@ -134,6 +134,25 @@ namespace student_learning_outcomes_management
             }
         }
 
+        private void barButtonItemUpdate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (validateForm())
+                updateMonHoc();
+        }
+        private void updateMonHoc()
+        {
+            tMonHoc mh = data.tMonHocs.FirstOrDefault(x => x.MaMonHoc.Contains(textEditMaMonHoc.Text.Trim()));
+
+            mh.TenMonHoc = textEditTenMonHoc.Text.Trim();
+            mh.SoTietLyThuyet = Int16.Parse(textEditSoTietLyThuyet.Text.Trim());
+            mh.SoTietThucHanh = Int16.Parse(textEditSoTietThucHanh.Text.Trim());
+
+            data.SaveChanges();
+            LoadData();
+
+            handleCancel();
+        }
+
         private void barButtonItemCancel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             handleCancel();
