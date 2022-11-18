@@ -152,6 +152,29 @@ namespace student_learning_outcomes_management
 
             handleCancel();
         }
+        private void barButtonItemDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa hay không?", "Xác nhận hành động", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                bool isExistedConstraintRecord = data.tKhoaHocs.Any(x => x.MaMonHoc == textEditMaMonHoc.Text.Trim());
+
+                if (isExistedConstraintRecord)
+                {
+                    MessageBox.Show("Xóa thất bại. Dữ liệu đã ràng buộc với bảng khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    tMonHoc mh = data.tMonHocs.FirstOrDefault(x => x.MaMonHoc.Contains(textEditMaMonHoc.Text.Trim()));
+
+                    data.tMonHocs.Remove(mh);
+                    data.SaveChanges();
+                    LoadData();
+
+                    handleCancel();
+                    data = new dbStudentLearningOutcomesManagementEntities();
+                }
+            }
+        }
 
         private void barButtonItemCancel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
