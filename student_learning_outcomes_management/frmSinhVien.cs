@@ -28,6 +28,9 @@ namespace student_learning_outcomes_management
             RenderLookUpEditKhoa();
             LoadData();
 
+            barButtonItemUpdate.Enabled = false;
+            barButtonItemDelete.Enabled = false;
+
             dxErrorProvider.SetIconAlignment(textEditMaSinhVien, ErrorIconAlignment.MiddleRight);
             dxErrorProvider.SetIconAlignment(textEditHoSinhVien, ErrorIconAlignment.MiddleRight);
             dxErrorProvider.SetIconAlignment(textEditTenSinhVien, ErrorIconAlignment.MiddleRight);
@@ -48,7 +51,7 @@ namespace student_learning_outcomes_management
                              TenKhoa = t.TenKhoa
                          };
             lookUpEditKhoa.Properties.DataSource = column;
-            lookUpEditKhoa.EditValue = lookUpEditKhoa.Properties.GetDataSourceValue(lookUpEditKhoa.Properties.Columns[0], 2);
+            lookUpEditKhoa.EditValue = lookUpEditKhoa.Properties.GetDataSourceValue(lookUpEditKhoa.Properties.Columns[0], 1);
         }
 
         private void LoadData()
@@ -76,7 +79,7 @@ namespace student_learning_outcomes_management
             textEditHoSinhVien.Text = gridView.GetRowCellValue(e.RowHandle, "HoSinhVien").ToString();
             textEditTenSinhVien.Text = gridView.GetRowCellValue(e.RowHandle, "TenSinhVien").ToString();
             textEditNgaySinh.Text = gridView.GetRowCellValue(e.RowHandle, "NgaySinh").ToString();
-            radioGroupPhai.SelectedIndex = gridView.GetRowCellValue(e.RowHandle, "Phai").ToString() == "Nam" ? 1 : 0;
+            radioGroupPhai.SelectedIndex = gridView.GetRowCellValue(e.RowHandle, "Phai").ToString() == "Nam" ? 0 : 1;
             textEditDienThoai.Text = gridView.GetRowCellValue(e.RowHandle, "DienThoai").ToString();
             textEditDiaChi.Text = gridView.GetRowCellValue(e.RowHandle, "DiaChi").ToString();
             lookUpEditKhoa.EditValue = gridView.GetRowCellValue(e.RowHandle, "MaKhoa").ToString();
@@ -178,7 +181,55 @@ namespace student_learning_outcomes_management
                 data.tSinhViens.Add(sv);
                 data.SaveChanges();
                 LoadData();
+
+                handleCancel();
             }
+        }
+
+        private void barButtonItemUpdate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (validateForm())
+                updateSinhVien();
+        }
+
+        private void updateSinhVien()
+        {
+            var sv = data.tSinhViens.FirstOrDefault(x => x.MaSinhVien.Contains(textEditMaSinhVien.Text.Trim()));
+
+            sv.HoSinhVien = textEditHoSinhVien.Text.Trim();
+            sv.TenSinhVien = textEditTenSinhVien.Text.Trim();
+            sv.NgaySinh = DateTime.Parse(textEditNgaySinh.Text);
+            sv.Phai = radioGroupPhai.SelectedIndex == 0 ? true : false;
+            sv.DienThoai = textEditDienThoai.Text.Trim();
+            sv.DiaChi = textEditDiaChi.Text.Trim();
+            sv.MaKhoa = lookUpEditKhoa.EditValue.ToString();
+
+            data.SaveChanges();
+            LoadData();
+            handleCancel();
+        }
+
+        private void barButtonItemCancel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            handleCancel();
+        }
+
+        private void handleCancel()
+        {
+            textEditMaSinhVien.Text = "";
+            textEditHoSinhVien.Text = "";
+            textEditTenSinhVien.Text = "";
+            textEditNgaySinh.Text = "";
+            radioGroupPhai.SelectedIndex = -1;
+            textEditDienThoai.Text = "";
+            textEditDiaChi.Text = "";
+            lookUpEditKhoa.EditValue = lookUpEditKhoa.Properties.GetDataSourceValue(lookUpEditKhoa.Properties.Columns[0], 1);
+
+            textEditMaSinhVien.ReadOnly = false;
+
+            barButtonItemAdd.Enabled = true;
+            barButtonItemUpdate.Enabled = false;
+            barButtonItemDelete.Enabled = false;
         }
     }
 }
