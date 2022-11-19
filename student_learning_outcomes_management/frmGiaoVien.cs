@@ -28,6 +28,9 @@ namespace student_learning_outcomes_management
             renderLookup();
             cbx_khoa.EditValue = "";
             LoadData();
+            btnAdd.Enabled = true;
+            btnDelete.Enabled = false;
+            btn_update.Enabled = false;
             gridView1.Columns["No"].View.OptionsBehavior.EditorShowMode = EditorShowMode.MouseUp;
             gridView1.RowClick += gridView1_RowClick;
         }
@@ -76,7 +79,6 @@ namespace student_learning_outcomes_management
             btnDelete.Enabled = true;
             btn_update.Enabled = true;
             btnAdd.Enabled = false;
-            btnCancel.Enabled = true;
 
                 txtMaGV.ReadOnly = true;
         }
