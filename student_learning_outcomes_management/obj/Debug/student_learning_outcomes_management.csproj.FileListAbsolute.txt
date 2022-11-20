@@ -62,14 +62,19 @@ D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_m
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\obj\Debug\student_learning_outcomes_management.csproj.CopyComplete
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\obj\Debug\student_learning_outcomes_management.exe
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\obj\Debug\student_learning_outcomes_management.pdb
-D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\DevExpress.XtraGrid.v21.2.dll
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\DevExpress.XtraLayout.v21.2.dll
+D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\DevExpress.XtraLayout.v21.2.xml
+D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\de\DevExpress.XtraLayout.v21.2.resources.dll
+D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\es\DevExpress.XtraLayout.v21.2.resources.dll
+D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\ja\DevExpress.XtraLayout.v21.2.resources.dll
+D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\ru\DevExpress.XtraLayout.v21.2.resources.dll
+D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\obj\Debug\student_learning_outcomes_management.frmSinhVien.resources
+D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\DevExpress.XtraGrid.v21.2.dll
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\DevExpress.XtraPrinting.v21.2.dll
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\DevExpress.RichEdit.v21.2.Core.dll
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\DevExpress.XtraTreeList.v21.2.dll
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\DevExpress.Office.v21.2.Core.dll
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\DevExpress.XtraGrid.v21.2.xml
-D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\DevExpress.XtraLayout.v21.2.xml
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\DevExpress.XtraPrinting.v21.2.xml
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\DevExpress.RichEdit.v21.2.Core.xml
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\DevExpress.XtraTreeList.v21.2.xml
@@ -78,10 +83,6 @@ D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_m
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\es\DevExpress.XtraGrid.v21.2.resources.dll
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\ja\DevExpress.XtraGrid.v21.2.resources.dll
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\ru\DevExpress.XtraGrid.v21.2.resources.dll
-D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\de\DevExpress.XtraLayout.v21.2.resources.dll
-D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\es\DevExpress.XtraLayout.v21.2.resources.dll
-D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\ja\DevExpress.XtraLayout.v21.2.resources.dll
-D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\ru\DevExpress.XtraLayout.v21.2.resources.dll
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\de\DevExpress.XtraPrinting.v21.2.resources.dll
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\es\DevExpress.XtraPrinting.v21.2.resources.dll
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\ja\DevExpress.XtraPrinting.v21.2.resources.dll
@@ -98,4 +99,3 @@ D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_m
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\es\DevExpress.Office.v21.2.Core.resources.dll
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\ja\DevExpress.Office.v21.2.Core.resources.dll
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\ru\DevExpress.Office.v21.2.Core.resources.dll
-D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\obj\Debug\student_learning_outcomes_management.frmKhoa.resources
