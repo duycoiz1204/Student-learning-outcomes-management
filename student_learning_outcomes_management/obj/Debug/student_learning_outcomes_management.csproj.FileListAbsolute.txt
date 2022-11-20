@@ -70,6 +70,7 @@ D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_m
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\ru\DevExpress.XtraLayout.v21.2.resources.dll
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\obj\Debug\student_learning_outcomes_management.frmSinhVien.resources
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\DevExpress.XtraGrid.v21.2.dll
+D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\obj\Debug\student_learning_outcomes_management.frmMonHoc.resources
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\DevExpress.XtraPrinting.v21.2.dll
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\DevExpress.RichEdit.v21.2.Core.dll
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\DevExpress.XtraTreeList.v21.2.dll
