@@ -390,3 +390,5 @@ D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_m
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\es\DevExpress.Diagram.v21.2.Core.resources.dll
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\ja\DevExpress.Diagram.v21.2.Core.resources.dll
 D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\bin\Debug\ru\DevExpress.Diagram.v21.2.Core.resources.dll
+D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\obj\Debug\student_learning_outcomes_management.rpLstDiemOfSinhVien.resources
+D:\Workspace\C#\student_learning_outcomes_management\student_learning_outcomes_management\obj\Debug\student_learning_outcomes_management.Test.resources
