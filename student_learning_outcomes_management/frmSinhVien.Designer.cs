@@ -204,31 +204,31 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager;
-            this.barDockControlTop.Size = new System.Drawing.Size(1328, 56);
+            this.barDockControlTop.Size = new System.Drawing.Size(1328, 55);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 543);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 544);
             this.barDockControlBottom.Manager = this.barManager;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1328, 21);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1328, 20);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 56);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 55);
             this.barDockControlLeft.Manager = this.barManager;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 487);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 489);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1328, 56);
+            this.barDockControlRight.Location = new System.Drawing.Point(1328, 55);
             this.barDockControlRight.Manager = this.barManager;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 487);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 489);
             // 
             // layoutControl1
             // 
@@ -242,11 +242,11 @@
             this.layoutControl1.Controls.Add(this.textEditHoSinhVien);
             this.layoutControl1.Controls.Add(this.textEditMaSinhVien);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 56);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 55);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1108, 332, 812, 500);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1328, 487);
+            this.layoutControl1.Size = new System.Drawing.Size(1328, 489);
             this.layoutControl1.TabIndex = 5;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -257,7 +257,7 @@
             this.gridControl.MainView = this.gridView;
             this.gridControl.MenuManager = this.barManager;
             this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(858, 444);
+            this.gridControl.Size = new System.Drawing.Size(858, 446);
             this.gridControl.TabIndex = 12;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -372,7 +372,7 @@
             // 
             // lookUpEditKhoa
             // 
-            this.lookUpEditKhoa.Location = new System.Drawing.Point(1033, 314);
+            this.lookUpEditKhoa.Location = new System.Drawing.Point(1033, 315);
             this.lookUpEditKhoa.MenuManager = this.barManager;
             this.lookUpEditKhoa.Name = "lookUpEditKhoa";
             this.lookUpEditKhoa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -393,7 +393,7 @@
             // 
             // textEditDiaChi
             // 
-            this.textEditDiaChi.Location = new System.Drawing.Point(1033, 276);
+            this.textEditDiaChi.Location = new System.Drawing.Point(1033, 277);
             this.textEditDiaChi.MenuManager = this.barManager;
             this.textEditDiaChi.Name = "textEditDiaChi";
             this.textEditDiaChi.Size = new System.Drawing.Size(249, 22);
@@ -402,7 +402,7 @@
             // 
             // textEditDienThoai
             // 
-            this.textEditDienThoai.Location = new System.Drawing.Point(1033, 238);
+            this.textEditDienThoai.Location = new System.Drawing.Point(1033, 239);
             this.textEditDienThoai.MenuManager = this.barManager;
             this.textEditDienThoai.Name = "textEditDienThoai";
             this.textEditDienThoai.Size = new System.Drawing.Size(249, 22);
@@ -423,7 +423,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(true, "Nam", true, "Nam", "radioNam"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(false, "Nữ", true, "Nữ", "radioNu")});
             this.radioGroupPhai.Properties.Padding = new System.Windows.Forms.Padding(0);
-            this.radioGroupPhai.Size = new System.Drawing.Size(249, 30);
+            this.radioGroupPhai.Size = new System.Drawing.Size(249, 31);
             this.radioGroupPhai.StyleController = this.layoutControl1;
             this.radioGroupPhai.TabIndex = 0;
             // 
@@ -472,15 +472,15 @@
             this.layoutControlItem9,
             this.layoutControlGroup1});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1328, 487);
+            this.Root.Size = new System.Drawing.Size(1328, 489);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(862, 346);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(862, 347);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(446, 121);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(446, 122);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem9
@@ -488,7 +488,7 @@
             this.layoutControlItem9.Control = this.gridControl;
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(862, 467);
+            this.layoutControlItem9.Size = new System.Drawing.Size(862, 469);
             this.layoutControlItem9.Text = "Danh sách sinh viên";
             this.layoutControlItem9.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem9.TextSize = new System.Drawing.Size(113, 16);
@@ -506,13 +506,13 @@
             this.layoutControlItem8});
             this.layoutControlGroup1.Location = new System.Drawing.Point(862, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(446, 346);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(446, 347);
             this.layoutControlGroup1.Text = "Thông tin sinh viên";
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.textEditDiaChi;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 220);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 221);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Padding = new DevExpress.XtraLayout.Utils.Padding(24, 24, 8, 8);
             this.layoutControlItem7.Size = new System.Drawing.Size(422, 38);
@@ -522,7 +522,7 @@
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.textEditDienThoai;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 182);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 183);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(24, 24, 8, 8);
             this.layoutControlItem6.Size = new System.Drawing.Size(422, 38);
@@ -535,7 +535,7 @@
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 152);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(24, 24, 0, 0);
-            this.layoutControlItem5.Size = new System.Drawing.Size(422, 30);
+            this.layoutControlItem5.Size = new System.Drawing.Size(422, 31);
             this.layoutControlItem5.Text = "Phái";
             this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Left;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(113, 16);
@@ -583,7 +583,7 @@
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.lookUpEditKhoa;
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 258);
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 259);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Padding = new DevExpress.XtraLayout.Utils.Padding(24, 24, 8, 8);
             this.layoutControlItem8.Size = new System.Drawing.Size(422, 38);
@@ -604,7 +604,6 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.IsMdiContainer = true;
             this.Name = "frmSinhVien";
             this.Text = "frmSinhVien";
             this.Load += new System.EventHandler(this.frmSinhVien_Load);

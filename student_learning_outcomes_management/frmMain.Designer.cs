@@ -102,31 +102,34 @@
             // 
             this.barButtonItemKhoa.Caption = "Khoa";
             this.barButtonItemKhoa.Id = 9;
-            this.barButtonItemKhoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKhoa.ImageOptions.Image")));
-            this.barButtonItemKhoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnKhoa.ImageOptions.LargeImage")));
+            this.barButtonItemKhoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemKhoa.ImageOptions.Image")));
+            this.barButtonItemKhoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemKhoa.ImageOptions.LargeImage")));
             this.barButtonItemKhoa.Name = "barButtonItemKhoa";
             this.barButtonItemKhoa.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             this.barButtonItemKhoa.SmallWithTextWidth = 100;
+            this.barButtonItemKhoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemKhoa_ItemClick);
             // 
             // barButtonItemMonHoc
             // 
             this.barButtonItemMonHoc.Caption = "Môn học";
             this.barButtonItemMonHoc.Id = 28;
-            this.barButtonItemMonHoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barButtonItemMonHoc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.barButtonItemMonHoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemMonHoc.ImageOptions.Image")));
+            this.barButtonItemMonHoc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemMonHoc.ImageOptions.LargeImage")));
             this.barButtonItemMonHoc.Name = "barButtonItemMonHoc";
             this.barButtonItemMonHoc.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             this.barButtonItemMonHoc.SmallWithTextWidth = 100;
+            this.barButtonItemMonHoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemMonHoc_ItemClick);
             // 
             // barButtonItemSinhVien
             // 
             this.barButtonItemSinhVien.Caption = "Sinh viên";
             this.barButtonItemSinhVien.Id = 11;
-            this.barButtonItemSinhVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.barButtonItemSinhVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.barButtonItemSinhVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemSinhVien.ImageOptions.Image")));
+            this.barButtonItemSinhVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemSinhVien.ImageOptions.LargeImage")));
             this.barButtonItemSinhVien.Name = "barButtonItemSinhVien";
             this.barButtonItemSinhVien.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             this.barButtonItemSinhVien.SmallWithTextWidth = 100;
+            this.barButtonItemSinhVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemSinhVien_ItemClick);
             // 
             // barButtonGroup2
             // 
@@ -141,31 +144,34 @@
             // 
             this.barButtonItemGiaoVien.Caption = "Giáo viên";
             this.barButtonItemGiaoVien.Id = 12;
-            this.barButtonItemGiaoVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGiaoVien.ImageOptions.Image")));
-            this.barButtonItemGiaoVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGiaoVien.ImageOptions.LargeImage")));
+            this.barButtonItemGiaoVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemGiaoVien.ImageOptions.Image")));
+            this.barButtonItemGiaoVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemGiaoVien.ImageOptions.LargeImage")));
             this.barButtonItemGiaoVien.Name = "barButtonItemGiaoVien";
             this.barButtonItemGiaoVien.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             this.barButtonItemGiaoVien.SmallWithTextWidth = 100;
+            this.barButtonItemGiaoVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemGiaoVien_ItemClick);
             // 
             // barButtonItemKhoaHoc
             // 
             this.barButtonItemKhoaHoc.Caption = "Khóa học";
             this.barButtonItemKhoaHoc.Id = 13;
-            this.barButtonItemKhoaHoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
-            this.barButtonItemKhoaHoc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
+            this.barButtonItemKhoaHoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemKhoaHoc.ImageOptions.Image")));
+            this.barButtonItemKhoaHoc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemKhoaHoc.ImageOptions.LargeImage")));
             this.barButtonItemKhoaHoc.Name = "barButtonItemKhoaHoc";
             this.barButtonItemKhoaHoc.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             this.barButtonItemKhoaHoc.SmallWithTextWidth = 100;
+            this.barButtonItemKhoaHoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemKhoaHoc_ItemClick);
             // 
             // barButtonItemKetQua
             // 
             this.barButtonItemKetQua.Caption = "Kết quả";
             this.barButtonItemKetQua.Id = 14;
-            this.barButtonItemKetQua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
-            this.barButtonItemKetQua.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
+            this.barButtonItemKetQua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemKetQua.ImageOptions.Image")));
+            this.barButtonItemKetQua.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemKetQua.ImageOptions.LargeImage")));
             this.barButtonItemKetQua.Name = "barButtonItemKetQua";
             this.barButtonItemKetQua.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             this.barButtonItemKetQua.SmallWithTextWidth = 100;
+            this.barButtonItemKetQua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemKetQua_ItemClick);
             // 
             // barCheckItem1
             // 

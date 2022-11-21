@@ -181,31 +181,31 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager;
-            this.barDockControlTop.Size = new System.Drawing.Size(1194, 56);
+            this.barDockControlTop.Size = new System.Drawing.Size(1194, 55);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 623);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 624);
             this.barDockControlBottom.Manager = this.barManager;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1194, 21);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1194, 20);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 56);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 55);
             this.barDockControlLeft.Manager = this.barManager;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 567);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 569);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1194, 56);
+            this.barDockControlRight.Location = new System.Drawing.Point(1194, 55);
             this.barDockControlRight.Manager = this.barManager;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 567);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 569);
             // 
             // layoutControl1
             // 
@@ -215,10 +215,10 @@
             this.layoutControl1.Controls.Add(this.gridControl);
             this.layoutControl1.Controls.Add(this.textEditMaMonHoc);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 56);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 55);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1194, 567);
+            this.layoutControl1.Size = new System.Drawing.Size(1194, 569);
             this.layoutControl1.TabIndex = 5;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -256,7 +256,7 @@
             this.gridControl.MainView = this.gridView;
             this.gridControl.MenuManager = this.barManager;
             this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(665, 524);
+            this.gridControl.Size = new System.Drawing.Size(665, 526);
             this.gridControl.TabIndex = 5;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -336,7 +336,7 @@
             this.layoutControlItem2,
             this.layoutControlGroup1});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1194, 567);
+            this.Root.Size = new System.Drawing.Size(1194, 569);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem1
@@ -344,7 +344,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(669, 202);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(505, 345);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(505, 347);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
@@ -352,7 +352,7 @@
             this.layoutControlItem2.Control = this.gridControl;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(669, 547);
+            this.layoutControlItem2.Size = new System.Drawing.Size(669, 549);
             this.layoutControlItem2.Text = "Danh sách môn học";
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(112, 16);
@@ -423,7 +423,6 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.IsMdiContainer = true;
             this.Name = "frmMonHoc";
             this.Text = "frmMonHoc";
             this.Load += new System.EventHandler(this.frmMonHoc_Load);
