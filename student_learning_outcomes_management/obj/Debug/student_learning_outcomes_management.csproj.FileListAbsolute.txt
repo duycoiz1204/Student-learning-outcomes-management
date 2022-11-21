@@ -237,6 +237,10 @@ C:\Users\DUY\Documents\2022_2023_HK1\CNPM\repo\student-learning-outcomes-managem
 C:\Users\DUY\Documents\2022_2023_HK1\CNPM\repo\student-learning-outcomes-management\student_learning_outcomes_management\bin\Debug\es\DevExpress.RichEdit.v21.2.Core.resources.dll
 C:\Users\DUY\Documents\2022_2023_HK1\CNPM\repo\student-learning-outcomes-management\student_learning_outcomes_management\bin\Debug\ja\DevExpress.RichEdit.v21.2.Core.resources.dll
 C:\Users\DUY\Documents\2022_2023_HK1\CNPM\repo\student-learning-outcomes-management\student_learning_outcomes_management\bin\Debug\ru\DevExpress.RichEdit.v21.2.Core.resources.dll
+C:\Users\DUY\Documents\2022_2023_HK1\CNPM\repo\student-learning-outcomes-management\student_learning_outcomes_management\bin\Debug\de\DevExpress.XtraTreeList.v21.2.resources.dll
+C:\Users\DUY\Documents\2022_2023_HK1\CNPM\repo\student-learning-outcomes-management\student_learning_outcomes_management\bin\Debug\es\DevExpress.XtraTreeList.v21.2.resources.dll
+C:\Users\DUY\Documents\2022_2023_HK1\CNPM\repo\student-learning-outcomes-management\student_learning_outcomes_management\bin\Debug\ja\DevExpress.XtraTreeList.v21.2.resources.dll
+C:\Users\DUY\Documents\2022_2023_HK1\CNPM\repo\student-learning-outcomes-management\student_learning_outcomes_management\bin\Debug\ru\DevExpress.XtraTreeList.v21.2.resources.dll
 C:\Users\DUY\Documents\2022_2023_HK1\CNPM\repo\student-learning-outcomes-management\student_learning_outcomes_management\bin\Debug\de\DevExpress.Office.v21.2.Core.resources.dll
 C:\Users\DUY\Documents\2022_2023_HK1\CNPM\repo\student-learning-outcomes-management\student_learning_outcomes_management\bin\Debug\es\DevExpress.Office.v21.2.Core.resources.dll
 C:\Users\DUY\Documents\2022_2023_HK1\CNPM\repo\student-learning-outcomes-management\student_learning_outcomes_management\bin\Debug\ja\DevExpress.Office.v21.2.Core.resources.dll
