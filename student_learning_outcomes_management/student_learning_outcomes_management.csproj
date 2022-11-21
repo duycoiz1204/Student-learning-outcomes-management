@@ -38,6 +38,7 @@
     <Reference Include="Accessibility" />
     <Reference Include="DevExpress.BonusSkins.v21.2" />
     <Reference Include="DevExpress.Charts.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v21.2" />
     <Reference Include="DevExpress.Data.v21.2" />
     <Reference Include="DevExpress.DataAccess.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -111,6 +112,18 @@
     </Compile>
     <Compile Include="frmKhoaHoc.Designer.cs">
       <DependentUpon>frmKhoaHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BangDiemKhoaHoc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BangDiemKhoaHoc.Designer.cs">
+      <DependentUpon>BangDiemKhoaHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CongTacGiangDay.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CongTacGiangDay.Designer.cs">
+      <DependentUpon>CongTacGiangDay.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -188,6 +201,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmKhoaHoc.resx">
       <DependentUpon>frmKhoaHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BangDiemKhoaHoc.resx">
+      <DependentUpon>BangDiemKhoaHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CongTacGiangDay.resx">
+      <DependentUpon>CongTacGiangDay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
