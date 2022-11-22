@@ -44,6 +44,7 @@
     <Reference Include="DevExpress.DataAccess.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.2.Drawing, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.PivotGrid.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v21.2.Core" />
     <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -63,6 +64,7 @@
     <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v21.2.Extensions, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -130,6 +132,54 @@
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportBangDiemKhoaHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportBangDiemKhoaHoc.Designer.cs">
+      <DependentUpon>frmReportBangDiemKhoaHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportBangDiemSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportBangDiemSinhVien.Designer.cs">
+      <DependentUpon>frmReportBangDiemSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportCongTacGiangDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportCongTacGiangDay.Designer.cs">
+      <DependentUpon>frmReportCongTacGiangDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportDanhSachSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportDanhSachSinhVien.Designer.cs">
+      <DependentUpon>frmReportDanhSachSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectRBangDiemKhoaHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectRBangDiemKhoaHoc.Designer.cs">
+      <DependentUpon>frmSelectRBangDiemKhoaHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectRCongTacgiangDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectRCongTacgiangDay.Designer.cs">
+      <DependentUpon>frmSelectRCongTacgiangDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectRDiemCuaSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectRDiemCuaSinhVien.Designer.cs">
+      <DependentUpon>frmSelectRDiemCuaSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectR_DSSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectR_DSSV.Designer.cs">
+      <DependentUpon>frmSelectR_DSSV.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSinhVien.cs">
       <SubType>Form</SubType>
@@ -210,6 +260,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportBangDiemKhoaHoc.resx">
+      <DependentUpon>frmReportBangDiemKhoaHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportBangDiemSinhVien.resx">
+      <DependentUpon>frmReportBangDiemSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportCongTacGiangDay.resx">
+      <DependentUpon>frmReportCongTacGiangDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportDanhSachSinhVien.resx">
+      <DependentUpon>frmReportDanhSachSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectRBangDiemKhoaHoc.resx">
+      <DependentUpon>frmSelectRBangDiemKhoaHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectRCongTacgiangDay.resx">
+      <DependentUpon>frmSelectRCongTacgiangDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectRDiemCuaSinhVien.resx">
+      <DependentUpon>frmSelectRDiemCuaSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectR_DSSV.resx">
+      <DependentUpon>frmSelectR_DSSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
