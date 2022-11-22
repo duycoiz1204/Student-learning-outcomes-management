@@ -60,5 +60,29 @@ namespace student_learning_outcomes_management
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void barButtonItemDSSinhVienKhoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmSelectR_DSSV frm = new frmSelectR_DSSV();
+            frm.Show();
+        }
+
+        private void barButtonItemCongTacGiangDay_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmSelectRCongTacgiangDay frm = new frmSelectRCongTacgiangDay();
+            frm.Show();
+        }
+
+        private void barButtonItemBangDiemKhoaHoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmSelectRBangDiemKhoaHoc frm = new frmSelectRBangDiemKhoaHoc();
+            frm.Show();
+        }
+
+        private void barButtonItemBangDiemSinhVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmSelectRDiemCuaSinhVien frm = new frmSelectRDiemCuaSinhVien();
+            frm.Show();
+        }
     }
 }
