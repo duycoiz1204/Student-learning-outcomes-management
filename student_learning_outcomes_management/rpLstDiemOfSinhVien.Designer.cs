@@ -106,7 +106,7 @@
             // 
             // Ngay
             // 
-            this.Ngay.Font = new System.Drawing.Font("Arial", 8F);
+            this.Ngay.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ngay.LocationFloat = new DevExpress.Utils.PointFloat(422.5F, 112.6667F);
             this.Ngay.Multiline = true;
             this.Ngay.Name = "Ngay";

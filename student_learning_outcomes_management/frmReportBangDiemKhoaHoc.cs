@@ -23,7 +23,7 @@ namespace student_learning_outcomes_management
             rpt = new BangDiemKhoaHoc();
             List<tKetQua> l = data.tKetQuas.ToList<tKetQua>();
             
-                             rpt.DataSource = l;
+            rpt.DataSource = l;
             tKhoaHoc kh = data.tKhoaHocs.FirstOrDefault(q => q.MaKhoaHoc == mkh);
             rpt.MaKhoaHoc.Text = mkh;
             rpt.MonHoc.Text = kh.tMonHoc.TenMonHoc.ToString().Trim();

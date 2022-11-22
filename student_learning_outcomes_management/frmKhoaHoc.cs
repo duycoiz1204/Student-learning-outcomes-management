@@ -123,6 +123,7 @@ namespace student_learning_outcomes_management
                     data.tKhoaHocs.Add(kh);
 
                     data.SaveChanges();
+                    MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadData();
                     handleCancel();
                 }
