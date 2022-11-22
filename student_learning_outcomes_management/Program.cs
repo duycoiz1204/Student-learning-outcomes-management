@@ -17,7 +17,7 @@ namespace student_learning_outcomes_management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmSinhVien());
+            Application.Run(new frmSelectRCongTacgiangDay());
         }
     }
 }
