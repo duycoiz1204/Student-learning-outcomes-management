@@ -20,20 +20,25 @@ namespace student_learning_outcomes_management
         public frmReportCongTacGiangDay(string khoa)
         {
             InitializeComponent();
-             rpt = new CongTacGiangDay();
+            rpt = new CongTacGiangDay();
             List<tKhoaHoc> l = data.tKhoaHocs.Where(q => q.tGiaoVien.tKhoa.MaKhoa == khoa).ToList<tKhoaHoc>();
-            
-            rpt.DataSource = l;
+            var column = from t in l
+                         select new
+                         {
+                             MaKhoaHoc = t.MaKhoaHoc,
+                             MaGiaoVien = t.MaGiaoVien,
+                             tGiaoVien = t.tGiaoVien,
+                             MaMonHoc = t.MaMonHoc,
+                             tMonHoc = t.tMonHoc,
+                             NgayBatDau = t.NgayBatDau.Value.ToString("dd/MM/yyyy"),
+                             NgayKetThuc = t.NgayKetThuc.Value.ToString("dd/MM/yyyy")
+                         };
+            rpt.DataSource = column;
             tKhoa k = data.tKhoas.FirstOrDefault(q => q.MaKhoa == khoa);
             rpt.MaKhoa.Text = khoa;
             rpt.Khoa.Text = k.TenKhoa;
             rpt.Ngay.Text = String.Format("Hồ Chí Minh, ngày {0} tháng {1} năm {2}", DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year);
             documentViewer1.DocumentSource = rpt;
-        }
-
-        private void frmReportCongTacGiangDay_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void editPrint_Click(object sender, EventArgs e)

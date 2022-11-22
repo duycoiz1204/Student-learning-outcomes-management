@@ -222,8 +222,8 @@
             // 
             this.barButtonItemDSSinhVienKhoa.Caption = "Danh sách sinh viên Khoa";
             this.barButtonItemDSSinhVienKhoa.Id = 24;
-            this.barButtonItemDSSinhVienKhoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.Image")));
-            this.barButtonItemDSSinhVienKhoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.LargeImage")));
+            this.barButtonItemDSSinhVienKhoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemDSSinhVienKhoa.ImageOptions.Image")));
+            this.barButtonItemDSSinhVienKhoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemDSSinhVienKhoa.ImageOptions.LargeImage")));
             this.barButtonItemDSSinhVienKhoa.Name = "barButtonItemDSSinhVienKhoa";
             this.barButtonItemDSSinhVienKhoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemDSSinhVienKhoa_ItemClick);
             // 
@@ -231,8 +231,8 @@
             // 
             this.barButtonItemCongTacGiangDay.Caption = "Công tác giảng dạy";
             this.barButtonItemCongTacGiangDay.Id = 25;
-            this.barButtonItemCongTacGiangDay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.Image")));
-            this.barButtonItemCongTacGiangDay.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.LargeImage")));
+            this.barButtonItemCongTacGiangDay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemCongTacGiangDay.ImageOptions.Image")));
+            this.barButtonItemCongTacGiangDay.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemCongTacGiangDay.ImageOptions.LargeImage")));
             this.barButtonItemCongTacGiangDay.Name = "barButtonItemCongTacGiangDay";
             this.barButtonItemCongTacGiangDay.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemCongTacGiangDay_ItemClick);
             // 
@@ -240,8 +240,8 @@
             // 
             this.barButtonItemBangDiemKhoaHoc.Caption = "Bảng điểm khóa học";
             this.barButtonItemBangDiemKhoaHoc.Id = 26;
-            this.barButtonItemBangDiemKhoaHoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.Image")));
-            this.barButtonItemBangDiemKhoaHoc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.LargeImage")));
+            this.barButtonItemBangDiemKhoaHoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemBangDiemKhoaHoc.ImageOptions.Image")));
+            this.barButtonItemBangDiemKhoaHoc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemBangDiemKhoaHoc.ImageOptions.LargeImage")));
             this.barButtonItemBangDiemKhoaHoc.Name = "barButtonItemBangDiemKhoaHoc";
             this.barButtonItemBangDiemKhoaHoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemBangDiemKhoaHoc_ItemClick);
             // 
@@ -249,8 +249,8 @@
             // 
             this.barButtonItemBangDiemSinhVien.Caption = "Bảng điểm sinh viên";
             this.barButtonItemBangDiemSinhVien.Id = 27;
-            this.barButtonItemBangDiemSinhVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
-            this.barButtonItemBangDiemSinhVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
+            this.barButtonItemBangDiemSinhVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemBangDiemSinhVien.ImageOptions.Image")));
+            this.barButtonItemBangDiemSinhVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemBangDiemSinhVien.ImageOptions.LargeImage")));
             this.barButtonItemBangDiemSinhVien.Name = "barButtonItemBangDiemSinhVien";
             this.barButtonItemBangDiemSinhVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemBangDiemSinhVien_ItemClick);
             // 
@@ -300,7 +300,7 @@
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
             this.Name = "frmMain";
-            this.Text = "frmMain";
+            this.Text = "Quản lý hệ thống trường đại học";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).EndInit();

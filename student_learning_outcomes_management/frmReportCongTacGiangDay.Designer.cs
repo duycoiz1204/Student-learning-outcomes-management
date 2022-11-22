@@ -73,7 +73,6 @@
             this.Controls.Add(this.documentViewer1);
             this.Name = "frmReportCongTacGiangDay";
             this.Text = "Công tác giảng dạy";
-            this.Load += new System.EventHandler(this.frmReportCongTacGiangDay_Load);
             this.ResumeLayout(false);
 
         }
