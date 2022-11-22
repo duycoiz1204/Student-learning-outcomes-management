@@ -106,6 +106,7 @@ namespace student_learning_outcomes_management
             if (handleValidate())
             {
                 createScore();
+                MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 loadData();
                 handleCancel();
             }

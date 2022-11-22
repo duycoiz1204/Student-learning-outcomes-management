@@ -22,6 +22,7 @@ namespace student_learning_outcomes_management
             InitializeComponent();
              rpt = new CongTacGiangDay();
             List<tKhoaHoc> l = data.tKhoaHocs.Where(q => q.tGiaoVien.tKhoa.MaKhoa == khoa).ToList<tKhoaHoc>();
+            
             rpt.DataSource = l;
             tKhoa k = data.tKhoas.FirstOrDefault(q => q.MaKhoa == khoa);
             rpt.MaKhoa.Text = khoa;

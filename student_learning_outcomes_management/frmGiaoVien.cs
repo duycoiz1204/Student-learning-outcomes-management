@@ -104,6 +104,7 @@ namespace student_learning_outcomes_management
                 };
                     data.tGiaoViens.Add(gv);
                     data.SaveChanges();
+                    MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadData();
                     handleCancel();
                 }
