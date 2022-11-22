@@ -22,8 +22,19 @@ namespace student_learning_outcomes_management
             InitializeComponent();
             rpt = new BangDiemKhoaHoc();
             List<tKetQua> l = data.tKetQuas.ToList<tKetQua>();
-            
-            rpt.DataSource = l;
+            var column = from t in l
+                         select new
+                         {
+                             MaSinhVien = t.MaSinhVien,
+                             Ho = t.tSinhVien.HoSinhVien,
+                             Ten = t.tSinhVien.TenSinhVien,
+                             PhaiText = t.tSinhVien.Phai.Value == true ? "Nam" : "Nữ",
+                             NgaySinhFormat = t.tSinhVien.NgaySinh.Value.ToString("dd/MM/yyyy"),
+                             LanThi = t.LanThi,
+                             Diem = t.Diem
+                         };
+            rpt.DataSource = column;
+
             tKhoaHoc kh = data.tKhoaHocs.FirstOrDefault(q => q.MaKhoaHoc == mkh);
             rpt.MaKhoaHoc.Text = mkh;
             rpt.MonHoc.Text = kh.tMonHoc.TenMonHoc.ToString().Trim();
@@ -35,11 +46,6 @@ namespace student_learning_outcomes_management
             rpt.NgayKetThuc.Text = kh.NgayKetThuc.ToString().Trim();
             rpt.Ngay.Text = String.Format("Hồ Chí Minh, ngày {0} tháng {1} năm {2}", DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year);
             documentViewer1.DocumentSource = rpt;
-        }
-
-        private void frmReportBangDiemKhoaHoc_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void editPrint_Click(object sender, EventArgs e)
