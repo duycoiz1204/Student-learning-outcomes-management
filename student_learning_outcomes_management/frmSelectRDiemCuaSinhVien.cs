@@ -14,10 +14,11 @@ namespace student_learning_outcomes_management
     public partial class frmSelectRDiemCuaSinhVien : DevExpress.XtraEditors.XtraForm
     {
         dbStudentLearningOutcomesManagementEntities data = new dbStudentLearningOutcomesManagementEntities();
-
-        public frmSelectRDiemCuaSinhVien()
+        frmMain Parent;
+        public frmSelectRDiemCuaSinhVien(frmMain parent)
         {
             InitializeComponent();
+            Parent = parent;
         }
 
         private void frmSelectRDiemCuaSinhVien_Load(object sender, EventArgs e)
@@ -56,7 +57,9 @@ namespace student_learning_outcomes_management
         private void btn_ctn_Click(object sender, EventArgs e)
         {
             frmReportBangDiemSinhVien frm = new frmReportBangDiemSinhVien(txt_MSSV.Text.Trim());
+            frm.MdiParent = Parent;
             frm.Show();
+            this.Close();
         }
     }
 }

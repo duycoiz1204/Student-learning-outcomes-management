@@ -15,10 +15,11 @@ namespace student_learning_outcomes_management
     public partial class frmSelectRCongTacgiangDay : DevExpress.XtraEditors.XtraForm
     {
         dbStudentLearningOutcomesManagementEntities data = new dbStudentLearningOutcomesManagementEntities();
-
-        public frmSelectRCongTacgiangDay()
+        frmMain Parent;
+        public frmSelectRCongTacgiangDay(frmMain parent)
         {
             InitializeComponent();
+            Parent = parent;
         }
 
         private void frmSelectRCongTacgiangDay_Load(object sender, EventArgs e)
@@ -70,7 +71,9 @@ namespace student_learning_outcomes_management
                 if (kh != "")
                 {
                     frmReportCongTacGiangDay frm = new frmReportCongTacGiangDay(kh);
+                    frm.MdiParent = Parent;
                     frm.Show();
+                    this.Close();
                     return;
                 }
             }

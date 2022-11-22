@@ -63,25 +63,25 @@ namespace student_learning_outcomes_management
 
         private void barButtonItemDSSinhVienKhoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmSelectR_DSSV frm = new frmSelectR_DSSV();
+            frmSelectR_DSSV frm = new frmSelectR_DSSV(this);
             frm.Show();
         }
 
         private void barButtonItemCongTacGiangDay_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmSelectRCongTacgiangDay frm = new frmSelectRCongTacgiangDay();
+            frmSelectRCongTacgiangDay frm = new frmSelectRCongTacgiangDay(this);
             frm.Show();
         }
 
         private void barButtonItemBangDiemKhoaHoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmSelectRBangDiemKhoaHoc frm = new frmSelectRBangDiemKhoaHoc();
+            frmSelectRBangDiemKhoaHoc frm = new frmSelectRBangDiemKhoaHoc(this);
             frm.Show();
         }
 
         private void barButtonItemBangDiemSinhVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmSelectRDiemCuaSinhVien frm = new frmSelectRDiemCuaSinhVien();
+            frmSelectRDiemCuaSinhVien frm = new frmSelectRDiemCuaSinhVien(this);
             frm.Show();
         }
     }

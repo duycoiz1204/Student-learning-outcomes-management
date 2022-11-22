@@ -15,10 +15,11 @@ namespace student_learning_outcomes_management
     public partial class frmSelectR_DSSV : DevExpress.XtraEditors.XtraForm
     {
         dbStudentLearningOutcomesManagementEntities data = new dbStudentLearningOutcomesManagementEntities();
-
-        public frmSelectR_DSSV()
+        frmMain Parent;
+        public frmSelectR_DSSV(frmMain parent)
         {
             InitializeComponent();
+            Parent = parent;
         }
 
         private void frmSelectR_DSSV_Load(object sender, EventArgs e)
@@ -69,7 +70,9 @@ namespace student_learning_outcomes_management
                 if (kh != "")
                 {
                     frmReportDanhSachSinhVien frm = new frmReportDanhSachSinhVien(kh);
+                    frm.MdiParent = Parent;
                     frm.Show();
+                    this.Close();
                     return;
                 }
             }

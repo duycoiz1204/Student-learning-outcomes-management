@@ -18,9 +18,11 @@ namespace student_learning_outcomes_management
         dbStudentLearningOutcomesManagementEntities data = new dbStudentLearningOutcomesManagementEntities();
         Boolean isLoop1 = true;
         Boolean isLoop2 = true;
-        public frmSelectRBangDiemKhoaHoc()
+        frmMain Parent;
+        public frmSelectRBangDiemKhoaHoc(frmMain parent)
         {
             InitializeComponent();
+            Parent = parent;
         }
 
         private void frmSelectRBangDiemKhoaHoc_Load(object sender, EventArgs e)
@@ -146,7 +148,9 @@ namespace student_learning_outcomes_management
                 if (kh != "" && kh.Length == 4)
                 {
                     frmReportBangDiemKhoaHoc frm = new frmReportBangDiemKhoaHoc(kh);
+                    frm.MdiParent = Parent;
                     frm.Show();
+                    this.Close();
                     return;
                 }
             }
