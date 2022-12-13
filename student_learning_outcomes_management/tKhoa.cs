@@ -17,6 +17,7 @@ namespace student_learning_outcomes_management
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tKhoa()
         {
+            this.countStudents = new HashSet<countStudent>();
             this.tGiaoViens = new HashSet<tGiaoVien>();
             this.tSinhViens = new HashSet<tSinhVien>();
         }
@@ -26,6 +27,8 @@ namespace student_learning_outcomes_management
         public string DiaChi { get; set; }
         public string DienThoai { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<countStudent> countStudents { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tGiaoVien> tGiaoViens { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -84,5 +84,19 @@ namespace student_learning_outcomes_management
             frmSelectRDiemCuaSinhVien frm = new frmSelectRDiemCuaSinhVien(this);
             frm.Show();
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            Login lg = new Login(this);
+            lg.Show();
+            this.Hide();
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Login lg = new Login(this);
+            lg.Show();
+            this.Hide();
+        }
     }
 }

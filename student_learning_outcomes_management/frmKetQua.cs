@@ -94,7 +94,9 @@ namespace student_learning_outcomes_management
                          {
                              No = ++i,
                              MaSinhVien = t.MaSinhVien.Trim(),
+                             TenSinhVien = t.tSinhVien.HoSinhVien.Trim() + " " + t.tSinhVien.TenSinhVien.Trim(),
                              MaKhoaHoc = t.MaKhoaHoc.Trim(),
+                             MonHoc = t.tKhoaHoc.tMonHoc.TenMonHoc.Trim(),
                              Diem = t.Diem,
                              LanThi = t.LanThi
                          };
@@ -280,7 +282,9 @@ namespace student_learning_outcomes_management
                              {
                                  No = ++i,
                                  MaSinhVien = t.MaSinhVien.Trim(),
+                                 TenSinhVien = t.tSinhVien.HoSinhVien.Trim() + " " + t.tSinhVien.TenSinhVien.Trim(),
                                  MaKhoaHoc = t.MaKhoaHoc.Trim(),
+                                 MonHoc = t.tKhoaHoc.tMonHoc.TenMonHoc.Trim(),
                                  Diem = t.Diem,
                                  LanThi = t.LanThi
                              };
@@ -319,7 +323,9 @@ namespace student_learning_outcomes_management
                              {
                                  No = ++i,
                                  MaSinhVien = t.MaSinhVien.Trim(),
+                                 TenSinhVien = t.tSinhVien.HoSinhVien.Trim() + " " + t.tSinhVien.TenSinhVien.Trim(),
                                  MaKhoaHoc = t.MaKhoaHoc.Trim(),
+                                 MonHoc = t.tKhoaHoc.tMonHoc.TenMonHoc.Trim(),
                                  Diem = t.Diem,
                                  LanThi = t.LanThi
                              };

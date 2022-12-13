@@ -45,6 +45,13 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.No = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MaSinhVien = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TenSinhVien = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MaKhoaHoc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MonHoc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Diem = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LanThi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.course = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -242,8 +249,86 @@
             // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.No,
+            this.MaSinhVien,
+            this.TenSinhVien,
+            this.MaKhoaHoc,
+            this.MonHoc,
+            this.Diem,
+            this.LanThi});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            // 
+            // No
+            // 
+            this.No.Caption = "STT";
+            this.No.FieldName = "No";
+            this.No.MinWidth = 25;
+            this.No.Name = "No";
+            this.No.Visible = true;
+            this.No.VisibleIndex = 0;
+            this.No.Width = 59;
+            // 
+            // MaSinhVien
+            // 
+            this.MaSinhVien.Caption = " Mã SV";
+            this.MaSinhVien.FieldName = "MaSinhVien";
+            this.MaSinhVien.MinWidth = 25;
+            this.MaSinhVien.Name = "MaSinhVien";
+            this.MaSinhVien.Visible = true;
+            this.MaSinhVien.VisibleIndex = 1;
+            this.MaSinhVien.Width = 69;
+            // 
+            // TenSinhVien
+            // 
+            this.TenSinhVien.Caption = "Tên Sinh Viên";
+            this.TenSinhVien.FieldName = "TenSinhVien";
+            this.TenSinhVien.MinWidth = 25;
+            this.TenSinhVien.Name = "TenSinhVien";
+            this.TenSinhVien.Visible = true;
+            this.TenSinhVien.VisibleIndex = 2;
+            this.TenSinhVien.Width = 141;
+            // 
+            // MaKhoaHoc
+            // 
+            this.MaKhoaHoc.Caption = "Mã KH";
+            this.MaKhoaHoc.FieldName = "MaKhoaHoc";
+            this.MaKhoaHoc.MinWidth = 25;
+            this.MaKhoaHoc.Name = "MaKhoaHoc";
+            this.MaKhoaHoc.Visible = true;
+            this.MaKhoaHoc.VisibleIndex = 3;
+            this.MaKhoaHoc.Width = 73;
+            // 
+            // MonHoc
+            // 
+            this.MonHoc.Caption = "Môn học";
+            this.MonHoc.FieldName = "MonHoc";
+            this.MonHoc.MinWidth = 25;
+            this.MonHoc.Name = "MonHoc";
+            this.MonHoc.Visible = true;
+            this.MonHoc.VisibleIndex = 4;
+            this.MonHoc.Width = 166;
+            // 
+            // Diem
+            // 
+            this.Diem.Caption = "Điểm";
+            this.Diem.FieldName = "Diem";
+            this.Diem.MinWidth = 25;
+            this.Diem.Name = "Diem";
+            this.Diem.Visible = true;
+            this.Diem.VisibleIndex = 5;
+            this.Diem.Width = 103;
+            // 
+            // LanThi
+            // 
+            this.LanThi.Caption = "Lần Thi";
+            this.LanThi.FieldName = "LanThi";
+            this.LanThi.MinWidth = 25;
+            this.LanThi.Name = "LanThi";
+            this.LanThi.Visible = true;
+            this.LanThi.VisibleIndex = 6;
+            this.LanThi.Width = 110;
             // 
             // groupBox2
             // 
@@ -591,5 +676,12 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraGrid.Columns.GridColumn No;
+        private DevExpress.XtraGrid.Columns.GridColumn MaSinhVien;
+        private DevExpress.XtraGrid.Columns.GridColumn TenSinhVien;
+        private DevExpress.XtraGrid.Columns.GridColumn MaKhoaHoc;
+        private DevExpress.XtraGrid.Columns.GridColumn MonHoc;
+        private DevExpress.XtraGrid.Columns.GridColumn Diem;
+        private DevExpress.XtraGrid.Columns.GridColumn LanThi;
     }
 }

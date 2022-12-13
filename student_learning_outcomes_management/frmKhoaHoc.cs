@@ -67,7 +67,9 @@ namespace student_learning_outcomes_management
                              No = ++i,
                              MaKhoaHoc = t.MaKhoaHoc.Trim(),
                              MaGiaoVien = t.MaGiaoVien.Trim(),
+                             TenGiaoVien = t.tGiaoVien.TenGiaoVien.Trim(),
                              MaMonHoc = t.MaMonHoc.Trim(),
+                             TenMonHoc = t.tMonHoc.TenMonHoc.Trim(),
                              NgayBatDau = t.NgayBatDau,
                              NgayKetThuc = t.NgayKetThuc,
                          };
@@ -227,6 +229,11 @@ namespace student_learning_outcomes_management
             btnUpdate.Enabled = false;
             btnAdd.Enabled = true;
 
+
+        }
+
+        private void lView_Course_Click(object sender, EventArgs e)
+        {
 
         }
     }

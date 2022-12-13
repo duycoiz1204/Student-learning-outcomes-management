@@ -5,6 +5,15 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="dbStudentLearningOutcomesManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="countStudent">
+          <Key>
+            <PropertyRef Name="MaKhoa" />
+            <PropertyRef Name="Year" />
+          </Key>
+          <Property Name="MaKhoa" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Year" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="Count" Type="int" />
+        </EntityType>
         <EntityType Name="tGiaoVien">
           <Key>
             <PropertyRef Name="MaGiaoVien" />
@@ -67,7 +76,19 @@
           <Property Name="DiaChi" Type="nvarchar" MaxLength="200" />
           <Property Name="MaKhoa" Type="char" MaxLength="10" />
         </EntityType>
-        <Association Name="FK__tGiaoVien__MaKho__2B3F6F97">
+        <Association Name="FK__countStud__MaKho__49C3F6B7">
+          <End Role="tKhoa" Type="Self.tKhoa" Multiplicity="1" />
+          <End Role="countStudent" Type="Self.countStudent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tKhoa">
+              <PropertyRef Name="MaKhoa" />
+            </Principal>
+            <Dependent Role="countStudent">
+              <PropertyRef Name="MaKhoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tGiaoVien__MaKho__3D5E1FD2">
           <End Role="tKhoa" Type="Self.tKhoa" Multiplicity="0..1" />
           <End Role="tGiaoVien" Type="Self.tGiaoVien" Multiplicity="*" />
           <ReferentialConstraint>
@@ -79,7 +100,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tKetQua__MaKhoaH__32E0915F">
+        <Association Name="FK__tKetQua__MaKhoaH__44FF419A">
           <End Role="tKhoaHoc" Type="Self.tKhoaHoc" Multiplicity="1" />
           <End Role="tKetQua" Type="Self.tKetQua" Multiplicity="*" />
           <ReferentialConstraint>
@@ -91,7 +112,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tKetQua__MaSinhV__31EC6D26">
+        <Association Name="FK__tKetQua__MaSinhV__440B1D61">
           <End Role="tSinhVien" Type="Self.tSinhVien" Multiplicity="1" />
           <End Role="tKetQua" Type="Self.tKetQua" Multiplicity="*" />
           <ReferentialConstraint>
@@ -103,7 +124,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tKhoaHoc__MaGiao__2E1BDC42">
+        <Association Name="FK__tKhoaHoc__MaGiao__403A8C7D">
           <End Role="tGiaoVien" Type="Self.tGiaoVien" Multiplicity="0..1" />
           <End Role="tKhoaHoc" Type="Self.tKhoaHoc" Multiplicity="*" />
           <ReferentialConstraint>
@@ -115,7 +136,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tKhoaHoc__MaMonH__2F10007B">
+        <Association Name="FK__tKhoaHoc__MaMonH__412EB0B6">
           <End Role="tMonHoc" Type="Self.tMonHoc" Multiplicity="0..1" />
           <End Role="tKhoaHoc" Type="Self.tKhoaHoc" Multiplicity="*" />
           <ReferentialConstraint>
@@ -127,7 +148,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tSinhVien__MaKho__286302EC">
+        <Association Name="FK__tSinhVien__MaKho__3A81B327">
           <End Role="tKhoa" Type="Self.tKhoa" Multiplicity="0..1" />
           <End Role="tSinhVien" Type="Self.tSinhVien" Multiplicity="*" />
           <ReferentialConstraint>
@@ -140,33 +161,38 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="dbStudentLearningOutcomesManagementModelStoreContainer">
+          <EntitySet Name="countStudent" EntityType="Self.countStudent" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tGiaoVien" EntityType="Self.tGiaoVien" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tKetQua" EntityType="Self.tKetQua" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tKhoa" EntityType="Self.tKhoa" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tKhoaHoc" EntityType="Self.tKhoaHoc" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tMonHoc" EntityType="Self.tMonHoc" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tSinhVien" EntityType="Self.tSinhVien" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__tGiaoVien__MaKho__2B3F6F97" Association="Self.FK__tGiaoVien__MaKho__2B3F6F97">
+          <AssociationSet Name="FK__countStud__MaKho__49C3F6B7" Association="Self.FK__countStud__MaKho__49C3F6B7">
+            <End Role="tKhoa" EntitySet="tKhoa" />
+            <End Role="countStudent" EntitySet="countStudent" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tGiaoVien__MaKho__3D5E1FD2" Association="Self.FK__tGiaoVien__MaKho__3D5E1FD2">
             <End Role="tKhoa" EntitySet="tKhoa" />
             <End Role="tGiaoVien" EntitySet="tGiaoVien" />
           </AssociationSet>
-          <AssociationSet Name="FK__tKetQua__MaKhoaH__32E0915F" Association="Self.FK__tKetQua__MaKhoaH__32E0915F">
+          <AssociationSet Name="FK__tKetQua__MaKhoaH__44FF419A" Association="Self.FK__tKetQua__MaKhoaH__44FF419A">
             <End Role="tKhoaHoc" EntitySet="tKhoaHoc" />
             <End Role="tKetQua" EntitySet="tKetQua" />
           </AssociationSet>
-          <AssociationSet Name="FK__tKetQua__MaSinhV__31EC6D26" Association="Self.FK__tKetQua__MaSinhV__31EC6D26">
+          <AssociationSet Name="FK__tKetQua__MaSinhV__440B1D61" Association="Self.FK__tKetQua__MaSinhV__440B1D61">
             <End Role="tSinhVien" EntitySet="tSinhVien" />
             <End Role="tKetQua" EntitySet="tKetQua" />
           </AssociationSet>
-          <AssociationSet Name="FK__tKhoaHoc__MaGiao__2E1BDC42" Association="Self.FK__tKhoaHoc__MaGiao__2E1BDC42">
+          <AssociationSet Name="FK__tKhoaHoc__MaGiao__403A8C7D" Association="Self.FK__tKhoaHoc__MaGiao__403A8C7D">
             <End Role="tGiaoVien" EntitySet="tGiaoVien" />
             <End Role="tKhoaHoc" EntitySet="tKhoaHoc" />
           </AssociationSet>
-          <AssociationSet Name="FK__tKhoaHoc__MaMonH__2F10007B" Association="Self.FK__tKhoaHoc__MaMonH__2F10007B">
+          <AssociationSet Name="FK__tKhoaHoc__MaMonH__412EB0B6" Association="Self.FK__tKhoaHoc__MaMonH__412EB0B6">
             <End Role="tMonHoc" EntitySet="tMonHoc" />
             <End Role="tKhoaHoc" EntitySet="tKhoaHoc" />
           </AssociationSet>
-          <AssociationSet Name="FK__tSinhVien__MaKho__286302EC" Association="Self.FK__tSinhVien__MaKho__286302EC">
+          <AssociationSet Name="FK__tSinhVien__MaKho__3A81B327" Association="Self.FK__tSinhVien__MaKho__3A81B327">
             <End Role="tKhoa" EntitySet="tKhoa" />
             <End Role="tSinhVien" EntitySet="tSinhVien" />
           </AssociationSet>
@@ -176,6 +202,16 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="dbStudentLearningOutcomesManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="countStudent">
+          <Key>
+            <PropertyRef Name="MaKhoa" />
+            <PropertyRef Name="Year" />
+          </Key>
+          <Property Name="MaKhoa" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Year" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Count" Type="Int32" />
+          <NavigationProperty Name="tKhoa" Relationship="Self.FK__countStud__MaKho__49C3F6B7" FromRole="countStudent" ToRole="tKhoa" />
+        </EntityType>
         <EntityType Name="tGiaoVien">
           <Key>
             <PropertyRef Name="MaGiaoVien" />
@@ -185,8 +221,8 @@
           <Property Name="HocVi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="SoDienThoai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
           <Property Name="MaKhoa" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
-          <NavigationProperty Name="tKhoa" Relationship="Self.FK__tGiaoVien__MaKho__2B3F6F97" FromRole="tGiaoVien" ToRole="tKhoa" />
-          <NavigationProperty Name="tKhoaHocs" Relationship="Self.FK__tKhoaHoc__MaGiao__2E1BDC42" FromRole="tGiaoVien" ToRole="tKhoaHoc" />
+          <NavigationProperty Name="tKhoa" Relationship="Self.FK__tGiaoVien__MaKho__3D5E1FD2" FromRole="tGiaoVien" ToRole="tKhoa" />
+          <NavigationProperty Name="tKhoaHocs" Relationship="Self.FK__tKhoaHoc__MaGiao__403A8C7D" FromRole="tGiaoVien" ToRole="tKhoaHoc" />
         </EntityType>
         <EntityType Name="tKetQua">
           <Key>
@@ -198,8 +234,8 @@
           <Property Name="MaKhoaHoc" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="LanThi" Type="Int32" Nullable="false" />
           <Property Name="Diem" Type="Double" />
-          <NavigationProperty Name="tKhoaHoc" Relationship="Self.FK__tKetQua__MaKhoaH__32E0915F" FromRole="tKetQua" ToRole="tKhoaHoc" />
-          <NavigationProperty Name="tSinhVien" Relationship="Self.FK__tKetQua__MaSinhV__31EC6D26" FromRole="tKetQua" ToRole="tSinhVien" />
+          <NavigationProperty Name="tKhoaHoc" Relationship="Self.FK__tKetQua__MaKhoaH__44FF419A" FromRole="tKetQua" ToRole="tKhoaHoc" />
+          <NavigationProperty Name="tSinhVien" Relationship="Self.FK__tKetQua__MaSinhV__440B1D61" FromRole="tKetQua" ToRole="tSinhVien" />
         </EntityType>
         <EntityType Name="tKhoa">
           <Key>
@@ -209,8 +245,9 @@
           <Property Name="TenKhoa" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="DienThoai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
-          <NavigationProperty Name="tGiaoViens" Relationship="Self.FK__tGiaoVien__MaKho__2B3F6F97" FromRole="tKhoa" ToRole="tGiaoVien" />
-          <NavigationProperty Name="tSinhViens" Relationship="Self.FK__tSinhVien__MaKho__286302EC" FromRole="tKhoa" ToRole="tSinhVien" />
+          <NavigationProperty Name="countStudents" Relationship="Self.FK__countStud__MaKho__49C3F6B7" FromRole="tKhoa" ToRole="countStudent" />
+          <NavigationProperty Name="tGiaoViens" Relationship="Self.FK__tGiaoVien__MaKho__3D5E1FD2" FromRole="tKhoa" ToRole="tGiaoVien" />
+          <NavigationProperty Name="tSinhViens" Relationship="Self.FK__tSinhVien__MaKho__3A81B327" FromRole="tKhoa" ToRole="tSinhVien" />
         </EntityType>
         <EntityType Name="tKhoaHoc">
           <Key>
@@ -221,9 +258,9 @@
           <Property Name="MaMonHoc" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
           <Property Name="NgayBatDau" Type="DateTime" Precision="0" />
           <Property Name="NgayKetThuc" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="tGiaoVien" Relationship="Self.FK__tKhoaHoc__MaGiao__2E1BDC42" FromRole="tKhoaHoc" ToRole="tGiaoVien" />
-          <NavigationProperty Name="tKetQuas" Relationship="Self.FK__tKetQua__MaKhoaH__32E0915F" FromRole="tKhoaHoc" ToRole="tKetQua" />
-          <NavigationProperty Name="tMonHoc" Relationship="Self.FK__tKhoaHoc__MaMonH__2F10007B" FromRole="tKhoaHoc" ToRole="tMonHoc" />
+          <NavigationProperty Name="tGiaoVien" Relationship="Self.FK__tKhoaHoc__MaGiao__403A8C7D" FromRole="tKhoaHoc" ToRole="tGiaoVien" />
+          <NavigationProperty Name="tKetQuas" Relationship="Self.FK__tKetQua__MaKhoaH__44FF419A" FromRole="tKhoaHoc" ToRole="tKetQua" />
+          <NavigationProperty Name="tMonHoc" Relationship="Self.FK__tKhoaHoc__MaMonH__412EB0B6" FromRole="tKhoaHoc" ToRole="tMonHoc" />
         </EntityType>
         <EntityType Name="tMonHoc">
           <Key>
@@ -233,7 +270,7 @@
           <Property Name="TenMonHoc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="SoTietLyThuyet" Type="Int32" />
           <Property Name="SoTietThucHanh" Type="Int32" />
-          <NavigationProperty Name="tKhoaHocs" Relationship="Self.FK__tKhoaHoc__MaMonH__2F10007B" FromRole="tMonHoc" ToRole="tKhoaHoc" />
+          <NavigationProperty Name="tKhoaHocs" Relationship="Self.FK__tKhoaHoc__MaMonH__412EB0B6" FromRole="tMonHoc" ToRole="tKhoaHoc" />
         </EntityType>
         <EntityType Name="tSinhVien">
           <Key>
@@ -247,10 +284,22 @@
           <Property Name="DienThoai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
           <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="MaKhoa" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
-          <NavigationProperty Name="tKetQuas" Relationship="Self.FK__tKetQua__MaSinhV__31EC6D26" FromRole="tSinhVien" ToRole="tKetQua" />
-          <NavigationProperty Name="tKhoa" Relationship="Self.FK__tSinhVien__MaKho__286302EC" FromRole="tSinhVien" ToRole="tKhoa" />
+          <NavigationProperty Name="tKetQuas" Relationship="Self.FK__tKetQua__MaSinhV__440B1D61" FromRole="tSinhVien" ToRole="tKetQua" />
+          <NavigationProperty Name="tKhoa" Relationship="Self.FK__tSinhVien__MaKho__3A81B327" FromRole="tSinhVien" ToRole="tKhoa" />
         </EntityType>
-        <Association Name="FK__tGiaoVien__MaKho__2B3F6F97">
+        <Association Name="FK__countStud__MaKho__49C3F6B7">
+          <End Role="tKhoa" Type="Self.tKhoa" Multiplicity="1" />
+          <End Role="countStudent" Type="Self.countStudent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tKhoa">
+              <PropertyRef Name="MaKhoa" />
+            </Principal>
+            <Dependent Role="countStudent">
+              <PropertyRef Name="MaKhoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tGiaoVien__MaKho__3D5E1FD2">
           <End Role="tKhoa" Type="Self.tKhoa" Multiplicity="0..1" />
           <End Role="tGiaoVien" Type="Self.tGiaoVien" Multiplicity="*" />
           <ReferentialConstraint>
@@ -262,7 +311,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tKhoaHoc__MaGiao__2E1BDC42">
+        <Association Name="FK__tKhoaHoc__MaGiao__403A8C7D">
           <End Role="tGiaoVien" Type="Self.tGiaoVien" Multiplicity="0..1" />
           <End Role="tKhoaHoc" Type="Self.tKhoaHoc" Multiplicity="*" />
           <ReferentialConstraint>
@@ -274,7 +323,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tKetQua__MaKhoaH__32E0915F">
+        <Association Name="FK__tKetQua__MaKhoaH__44FF419A">
           <End Role="tKhoaHoc" Type="Self.tKhoaHoc" Multiplicity="1" />
           <End Role="tKetQua" Type="Self.tKetQua" Multiplicity="*" />
           <ReferentialConstraint>
@@ -286,7 +335,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tKetQua__MaSinhV__31EC6D26">
+        <Association Name="FK__tKetQua__MaSinhV__440B1D61">
           <End Role="tSinhVien" Type="Self.tSinhVien" Multiplicity="1" />
           <End Role="tKetQua" Type="Self.tKetQua" Multiplicity="*" />
           <ReferentialConstraint>
@@ -298,7 +347,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tSinhVien__MaKho__286302EC">
+        <Association Name="FK__tSinhVien__MaKho__3A81B327">
           <End Role="tKhoa" Type="Self.tKhoa" Multiplicity="0..1" />
           <End Role="tSinhVien" Type="Self.tSinhVien" Multiplicity="*" />
           <ReferentialConstraint>
@@ -310,7 +359,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tKhoaHoc__MaMonH__2F10007B">
+        <Association Name="FK__tKhoaHoc__MaMonH__412EB0B6">
           <End Role="tMonHoc" Type="Self.tMonHoc" Multiplicity="0..1" />
           <End Role="tKhoaHoc" Type="Self.tKhoaHoc" Multiplicity="*" />
           <ReferentialConstraint>
@@ -323,33 +372,38 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="dbStudentLearningOutcomesManagementEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="countStudents" EntityType="Self.countStudent" />
           <EntitySet Name="tGiaoViens" EntityType="Self.tGiaoVien" />
           <EntitySet Name="tKetQuas" EntityType="Self.tKetQua" />
           <EntitySet Name="tKhoas" EntityType="Self.tKhoa" />
           <EntitySet Name="tKhoaHocs" EntityType="Self.tKhoaHoc" />
           <EntitySet Name="tMonHocs" EntityType="Self.tMonHoc" />
           <EntitySet Name="tSinhViens" EntityType="Self.tSinhVien" />
-          <AssociationSet Name="FK__tGiaoVien__MaKho__2B3F6F97" Association="Self.FK__tGiaoVien__MaKho__2B3F6F97">
+          <AssociationSet Name="FK__countStud__MaKho__49C3F6B7" Association="Self.FK__countStud__MaKho__49C3F6B7">
+            <End Role="tKhoa" EntitySet="tKhoas" />
+            <End Role="countStudent" EntitySet="countStudents" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tGiaoVien__MaKho__3D5E1FD2" Association="Self.FK__tGiaoVien__MaKho__3D5E1FD2">
             <End Role="tKhoa" EntitySet="tKhoas" />
             <End Role="tGiaoVien" EntitySet="tGiaoViens" />
           </AssociationSet>
-          <AssociationSet Name="FK__tKhoaHoc__MaGiao__2E1BDC42" Association="Self.FK__tKhoaHoc__MaGiao__2E1BDC42">
+          <AssociationSet Name="FK__tKhoaHoc__MaGiao__403A8C7D" Association="Self.FK__tKhoaHoc__MaGiao__403A8C7D">
             <End Role="tGiaoVien" EntitySet="tGiaoViens" />
             <End Role="tKhoaHoc" EntitySet="tKhoaHocs" />
           </AssociationSet>
-          <AssociationSet Name="FK__tKetQua__MaKhoaH__32E0915F" Association="Self.FK__tKetQua__MaKhoaH__32E0915F">
+          <AssociationSet Name="FK__tKetQua__MaKhoaH__44FF419A" Association="Self.FK__tKetQua__MaKhoaH__44FF419A">
             <End Role="tKhoaHoc" EntitySet="tKhoaHocs" />
             <End Role="tKetQua" EntitySet="tKetQuas" />
           </AssociationSet>
-          <AssociationSet Name="FK__tKetQua__MaSinhV__31EC6D26" Association="Self.FK__tKetQua__MaSinhV__31EC6D26">
+          <AssociationSet Name="FK__tKetQua__MaSinhV__440B1D61" Association="Self.FK__tKetQua__MaSinhV__440B1D61">
             <End Role="tSinhVien" EntitySet="tSinhViens" />
             <End Role="tKetQua" EntitySet="tKetQuas" />
           </AssociationSet>
-          <AssociationSet Name="FK__tSinhVien__MaKho__286302EC" Association="Self.FK__tSinhVien__MaKho__286302EC">
+          <AssociationSet Name="FK__tSinhVien__MaKho__3A81B327" Association="Self.FK__tSinhVien__MaKho__3A81B327">
             <End Role="tKhoa" EntitySet="tKhoas" />
             <End Role="tSinhVien" EntitySet="tSinhViens" />
           </AssociationSet>
-          <AssociationSet Name="FK__tKhoaHoc__MaMonH__2F10007B" Association="Self.FK__tKhoaHoc__MaMonH__2F10007B">
+          <AssociationSet Name="FK__tKhoaHoc__MaMonH__412EB0B6" Association="Self.FK__tKhoaHoc__MaMonH__412EB0B6">
             <End Role="tMonHoc" EntitySet="tMonHocs" />
             <End Role="tKhoaHoc" EntitySet="tKhoaHocs" />
           </AssociationSet>
@@ -360,6 +414,15 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="dbStudentLearningOutcomesManagementModelStoreContainer" CdmEntityContainer="dbStudentLearningOutcomesManagementEntities">
+          <EntitySetMapping Name="countStudents">
+            <EntityTypeMapping TypeName="dbStudentLearningOutcomesManagementModel.countStudent">
+              <MappingFragment StoreEntitySet="countStudent">
+                <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="tGiaoViens">
             <EntityTypeMapping TypeName="dbStudentLearningOutcomesManagementModel.tGiaoVien">
               <MappingFragment StoreEntitySet="tGiaoVien">

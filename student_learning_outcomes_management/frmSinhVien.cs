@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.ClipboardSource.SpreadsheetML;
+using DevExpress.XtraBars.Docking2010.Views.Widget;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.DXErrorProvider;
 
@@ -43,6 +44,7 @@ namespace student_learning_outcomes_management
 
         private void RenderLookUpEditKhoa()
         {
+            
             List<tKhoa> LstKhoa = data.tKhoas.ToList();
             var column = from t in LstKhoa
                          select new
@@ -72,7 +74,7 @@ namespace student_learning_outcomes_management
                           };
             gridControl.DataSource = columns.ToList();
         }
-
+          
         private void gridView_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             textEditMaSinhVien.Text = gridView.GetRowCellValue(e.RowHandle, "MaSinhVien").ToString();
@@ -110,16 +112,6 @@ namespace student_learning_outcomes_management
             string MaKhoa = lookUpEditKhoa.EditValue.ToString();
             dxErrorProvider.ClearErrors();
 
-            if (MaSinhVien.Length == 0)
-            {
-                dxErrorProvider.SetError(textEditMaSinhVien, "Vui lòng nhập mã sinh viên");
-                isValid = false;
-            }
-            else if (MaSinhVien.Length != 8)
-            {
-                dxErrorProvider.SetError(textEditMaSinhVien, "Mã sinh viên bắt buộc phải có 8 kí tự");
-                isValid = false;
-            }
             if (HoSinhVien.Length == 0)
             {
                 dxErrorProvider.SetError(textEditHoSinhVien, "Vui lòng nhập họ sinh viên");
@@ -167,9 +159,33 @@ namespace student_learning_outcomes_management
             }
             else
             {
+                String year = DateTime.Now.ToString("yy");
+                String makhoa = lookUpEditKhoa.EditValue.ToString();
+                char k = makhoa.ToCharArray()[3];
+
+                countStudent c = data.countStudents.FirstOrDefault(q => (q.MaKhoa == makhoa && q.Year.Trim() == year));
+                int stt = c.Count.Value;
+                c.Count = stt + 1;
+                String MSSV;
+                if (stt < 10)
+                {
+                    MSSV = k + year + "0000" + stt;
+                }else if (stt < 100)
+                {
+                    MSSV = k + year + "000" + stt;
+                }
+                else if (stt < 1000)
+                {
+                    MSSV = k + year + "00" + stt;
+                }
+                else
+                {
+                    MSSV = k + year + "0" + stt;
+                }
+
                 tSinhVien sv = new tSinhVien
                 {
-                    MaSinhVien = textEditMaSinhVien.Text.Trim(),
+                    MaSinhVien = MSSV,
                     HoSinhVien = textEditHoSinhVien.Text.Trim(),
                     TenSinhVien = textEditTenSinhVien.Text.Trim(),
                     NgaySinh = DateTime.Parse(textEditNgaySinh.Text),
@@ -249,7 +265,6 @@ namespace student_learning_outcomes_management
             textEditDiaChi.Text = "";
             lookUpEditKhoa.EditValue = lookUpEditKhoa.Properties.GetDataSourceValue(lookUpEditKhoa.Properties.Columns[0], 1);
 
-            textEditMaSinhVien.ReadOnly = false;
 
             barButtonItemAdd.Enabled = true;
             barButtonItemUpdate.Enabled = false;

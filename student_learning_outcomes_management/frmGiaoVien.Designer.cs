@@ -45,6 +45,11 @@
             this.cbx_khoa = new DevExpress.XtraEditors.LookUpEdit();
             this.lView_GV = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.No = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MaGiaoVien = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TenGiaoVien = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.HocVi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SDT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cbx_HocVi = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtSDT = new DevExpress.XtraEditors.TextEdit();
             this.txtTenGV = new DevExpress.XtraEditors.TextEdit();
@@ -243,8 +248,64 @@
             // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.No,
+            this.MaGiaoVien,
+            this.TenGiaoVien,
+            this.HocVi,
+            this.SDT});
             this.gridView1.GridControl = this.lView_GV;
             this.gridView1.Name = "gridView1";
+            // 
+            // No
+            // 
+            this.No.Caption = "STT";
+            this.No.FieldName = "No";
+            this.No.MinWidth = 25;
+            this.No.Name = "No";
+            this.No.Visible = true;
+            this.No.VisibleIndex = 0;
+            this.No.Width = 66;
+            // 
+            // MaGiaoVien
+            // 
+            this.MaGiaoVien.Caption = "Mã Giáo Viên";
+            this.MaGiaoVien.FieldName = "MaGiaoVien";
+            this.MaGiaoVien.MinWidth = 25;
+            this.MaGiaoVien.Name = "MaGiaoVien";
+            this.MaGiaoVien.Visible = true;
+            this.MaGiaoVien.VisibleIndex = 1;
+            this.MaGiaoVien.Width = 94;
+            // 
+            // TenGiaoVien
+            // 
+            this.TenGiaoVien.Caption = "Tên giáo viên";
+            this.TenGiaoVien.FieldName = "TenGiaoVien";
+            this.TenGiaoVien.MinWidth = 25;
+            this.TenGiaoVien.Name = "TenGiaoVien";
+            this.TenGiaoVien.Visible = true;
+            this.TenGiaoVien.VisibleIndex = 2;
+            this.TenGiaoVien.Width = 206;
+            // 
+            // HocVi
+            // 
+            this.HocVi.Caption = "Học vị";
+            this.HocVi.FieldName = "HocVi";
+            this.HocVi.MinWidth = 25;
+            this.HocVi.Name = "HocVi";
+            this.HocVi.Visible = true;
+            this.HocVi.VisibleIndex = 3;
+            this.HocVi.Width = 118;
+            // 
+            // SDT
+            // 
+            this.SDT.Caption = "SDT";
+            this.SDT.FieldName = "SoDienThoai";
+            this.SDT.MinWidth = 25;
+            this.SDT.Name = "SDT";
+            this.SDT.Visible = true;
+            this.SDT.VisibleIndex = 4;
+            this.SDT.Width = 94;
             // 
             // cbx_HocVi
             // 
@@ -452,5 +513,10 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider errorProvider;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraGrid.Columns.GridColumn No;
+        private DevExpress.XtraGrid.Columns.GridColumn MaGiaoVien;
+        private DevExpress.XtraGrid.Columns.GridColumn TenGiaoVien;
+        private DevExpress.XtraGrid.Columns.GridColumn HocVi;
+        private DevExpress.XtraGrid.Columns.GridColumn SDT;
     }
 }

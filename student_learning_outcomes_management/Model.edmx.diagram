@@ -4,19 +4,21 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d905989e04184868b167eac6f81306c0" Name="Diagram1">
-        <EntityTypeShape EntityType="dbStudentLearningOutcomesManagementModel.tGiaoVien" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbStudentLearningOutcomesManagementModel.tKetQua" Width="1.5" PointX="7.5" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbStudentLearningOutcomesManagementModel.tKhoa" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbStudentLearningOutcomesManagementModel.tKhoaHoc" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbStudentLearningOutcomesManagementModel.tMonHoc" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbStudentLearningOutcomesManagementModel.tSinhVien" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
-        <AssociationConnector Association="dbStudentLearningOutcomesManagementModel.FK__tGiaoVien__MaKho__2B3F6F97" ManuallyRouted="false" />
-        <AssociationConnector Association="dbStudentLearningOutcomesManagementModel.FK__tKhoaHoc__MaGiao__2E1BDC42" ManuallyRouted="false" />
-        <AssociationConnector Association="dbStudentLearningOutcomesManagementModel.FK__tKetQua__MaKhoaH__32E0915F" ManuallyRouted="false" />
-        <AssociationConnector Association="dbStudentLearningOutcomesManagementModel.FK__tKetQua__MaSinhV__31EC6D26" ManuallyRouted="false" />
-        <AssociationConnector Association="dbStudentLearningOutcomesManagementModel.FK__tSinhVien__MaKho__286302EC" ManuallyRouted="false" />
-        <AssociationConnector Association="dbStudentLearningOutcomesManagementModel.FK__tKhoaHoc__MaMonH__2F10007B" ManuallyRouted="false" />
+      <Diagram DiagramId="378674b03a2648bba978d12bfdb49427" Name="Diagram1">
+        <EntityTypeShape EntityType="dbStudentLearningOutcomesManagementModel.countStudent" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbStudentLearningOutcomesManagementModel.tGiaoVien" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbStudentLearningOutcomesManagementModel.tKetQua" Width="1.5" PointX="7.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbStudentLearningOutcomesManagementModel.tKhoa" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbStudentLearningOutcomesManagementModel.tKhoaHoc" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbStudentLearningOutcomesManagementModel.tMonHoc" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbStudentLearningOutcomesManagementModel.tSinhVien" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <AssociationConnector Association="dbStudentLearningOutcomesManagementModel.FK__countStud__MaKho__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="dbStudentLearningOutcomesManagementModel.FK__tGiaoVien__MaKho__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="dbStudentLearningOutcomesManagementModel.FK__tKhoaHoc__MaGiao__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="dbStudentLearningOutcomesManagementModel.FK__tKetQua__MaKhoaH__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="dbStudentLearningOutcomesManagementModel.FK__tKetQua__MaSinhV__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="dbStudentLearningOutcomesManagementModel.FK__tSinhVien__MaKho__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="dbStudentLearningOutcomesManagementModel.FK__tKhoaHoc__MaMonH__412EB0B6" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

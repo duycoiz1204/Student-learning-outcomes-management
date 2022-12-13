@@ -1,6 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="dbStudentLearningOutcomesManagementModelStoreContainer" CdmEntityContainer="dbStudentLearningOutcomesManagementEntities">
+    <EntitySetMapping Name="countStudents">
+      <EntityTypeMapping TypeName="dbStudentLearningOutcomesManagementModel.countStudent">
+        <MappingFragment StoreEntitySet="countStudent">
+          <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="tGiaoViens">
       <EntityTypeMapping TypeName="dbStudentLearningOutcomesManagementModel.tGiaoVien">
         <MappingFragment StoreEntitySet="tGiaoVien">

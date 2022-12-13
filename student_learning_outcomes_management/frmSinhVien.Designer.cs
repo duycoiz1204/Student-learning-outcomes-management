@@ -451,6 +451,7 @@
             // 
             // textEditMaSinhVien
             // 
+            this.textEditMaSinhVien.Enabled = false;
             this.textEditMaSinhVien.Location = new System.Drawing.Point(1026, 56);
             this.textEditMaSinhVien.MenuManager = this.barManager;
             this.textEditMaSinhVien.Name = "textEditMaSinhVien";

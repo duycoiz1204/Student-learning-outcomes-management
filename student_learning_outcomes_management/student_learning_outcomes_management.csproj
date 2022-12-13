@@ -91,6 +91,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Account.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Account.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Account.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Account.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Account.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="countStudent.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="frmKhoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +211,12 @@
     <Compile Include="frmMonHoc.Designer.cs">
       <DependentUpon>frmMonHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -221,6 +245,9 @@
     </Compile>
     <Compile Include="rpLstDiemOfSinhVien.Designer.cs">
       <DependentUpon>rpLstDiemOfSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tAccount.cs">
+      <DependentUpon>Account.tt</DependentUpon>
     </Compile>
     <Compile Include="tGiaoVien.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -291,6 +318,9 @@
     <EmbeddedResource Include="frmMonHoc.resx">
       <DependentUpon>frmMonHoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -307,6 +337,13 @@
     <EmbeddedResource Include="rpLstDiemOfSinhVien.resx">
       <DependentUpon>rpLstDiemOfSinhVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="Account.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Account.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Account.edmx.diagram">
+      <DependentUpon>Account.edmx</DependentUpon>
+    </None>
     <None Include="App.config" />
     <EntityDeploy Include="Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -332,6 +369,16 @@
     <None Include="tSinhVien.datasource" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Account.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Account.edmx</DependentUpon>
+      <LastGenOutput>Account.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Account.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Account.edmx</DependentUpon>
+      <LastGenOutput>Account.cs</LastGenOutput>
+    </Content>
     <Content Include="Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>

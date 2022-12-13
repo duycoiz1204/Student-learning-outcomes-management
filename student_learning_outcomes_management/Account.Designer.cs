@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\DUY\Documents\GitHub\student-learning-outcomes-management\student_learning_outcomes_management\Model.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\DUY\Documents\GitHub\student-learning-outcomes-management\student_learning_outcomes_management\Account.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

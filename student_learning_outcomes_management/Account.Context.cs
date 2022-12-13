@@ -13,10 +13,10 @@ namespace student_learning_outcomes_management
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class dbStudentLearningOutcomesManagementEntities : DbContext
+    public partial class Account : DbContext
     {
-        public dbStudentLearningOutcomesManagementEntities()
-            : base("name=dbStudentLearningOutcomesManagementEntities")
+        public Account()
+            : base("name=Account")
         {
         }
     
@@ -25,12 +25,6 @@ namespace student_learning_outcomes_management
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<countStudent> countStudents { get; set; }
-        public virtual DbSet<tGiaoVien> tGiaoViens { get; set; }
-        public virtual DbSet<tKetQua> tKetQuas { get; set; }
-        public virtual DbSet<tKhoa> tKhoas { get; set; }
-        public virtual DbSet<tKhoaHoc> tKhoaHocs { get; set; }
-        public virtual DbSet<tMonHoc> tMonHocs { get; set; }
-        public virtual DbSet<tSinhVien> tSinhViens { get; set; }
+        public virtual DbSet<tAccount> tAccounts { get; set; }
     }
 }
