@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSelectRDiemCuaSinhVien));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_MSSV = new DevExpress.XtraEditors.TextEdit();
@@ -205,6 +206,7 @@
             this.Controls.Add(this.txt_MSSV);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelControl1);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmSelectRDiemCuaSinhVien.IconOptions.Image")));
             this.Name = "frmSelectRDiemCuaSinhVien";
             this.Text = "Bảng điểm sinh viên";
             this.Load += new System.EventHandler(this.frmSelectRDiemCuaSinhVien_Load);

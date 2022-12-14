@@ -317,6 +317,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1498, 613);
             this.Controls.Add(this.ribbonControl1);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmMain.IconOptions.Image")));
             this.IsMdiContainer = true;
             this.Name = "frmMain";
             this.Text = "Quản lý hệ thống trường đại học - 52000650 Hoàng Đức Duy - 52000651 Huỳnh Kiên Du" +

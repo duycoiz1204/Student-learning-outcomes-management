@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSelectR_DSSV));
             this.btn_ctn = new DevExpress.XtraEditors.SimpleButton();
             this.btn_cancel = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -96,6 +97,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbx_khoa);
             this.Controls.Add(this.labelControl1);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmSelectR_DSSV.IconOptions.Image")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSelectR_DSSV";

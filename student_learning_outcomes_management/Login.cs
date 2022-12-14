@@ -69,5 +69,10 @@ namespace student_learning_outcomes_management
                 parent.Close();
             }
         }
+
+        private void pictureEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSelectRBangDiemKhoaHoc));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.cbx_khoa = new System.Windows.Forms.ComboBox();
             this.btn_ctn = new DevExpress.XtraEditors.SimpleButton();
@@ -167,6 +168,7 @@
             this.Controls.Add(this.cbx_khoa);
             this.Controls.Add(this.labelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmSelectRBangDiemKhoaHoc.IconOptions.Image")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSelectRBangDiemKhoaHoc";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSelectRCongTacgiangDay));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.cbx_khoa = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -97,6 +98,7 @@
             this.Controls.Add(this.cbx_khoa);
             this.Controls.Add(this.labelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmSelectRCongTacgiangDay.IconOptions.Image")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSelectRCongTacgiangDay";
