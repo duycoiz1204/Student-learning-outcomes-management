@@ -496,10 +496,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItemCancel;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
-        private DevExpress.XtraEditors.TextEdit textEditDienThoai;
-        private DevExpress.XtraEditors.TextEdit textEditDiaChi;
-        private DevExpress.XtraEditors.TextEdit textEditTenKhoa;
-        private DevExpress.XtraEditors.TextEdit textEditMaKhoa;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
@@ -517,5 +513,9 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        public DevExpress.XtraEditors.TextEdit textEditDienThoai;
+        public DevExpress.XtraEditors.TextEdit textEditDiaChi;
+        public DevExpress.XtraEditors.TextEdit textEditTenKhoa;
+        public DevExpress.XtraEditors.TextEdit textEditMaKhoa;
     }
 }
