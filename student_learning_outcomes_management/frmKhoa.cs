@@ -21,6 +21,11 @@ namespace student_learning_outcomes_management
         public frmKhoa()
         {
             InitializeComponent();
+        }
+
+        private void frmKhoa_Load(object sender, EventArgs e)
+        {
+            LoadData();
 
             barButtonItemUpdate.Enabled = false;
             barButtonItemDelete.Enabled = false;
@@ -29,11 +34,6 @@ namespace student_learning_outcomes_management
             dxErrorProvider.SetIconAlignment(textEditTenKhoa, ErrorIconAlignment.MiddleRight);
             dxErrorProvider.SetIconAlignment(textEditDiaChi, ErrorIconAlignment.MiddleRight);
             dxErrorProvider.SetIconAlignment(textEditDienThoai, ErrorIconAlignment.MiddleRight);
-        }
-
-        private void frmKhoa_Load(object sender, EventArgs e)
-        {
-            LoadData();
         }
 
         private void LoadData()
@@ -54,11 +54,10 @@ namespace student_learning_outcomes_management
 
         private void barButtonItemAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (validateForm())
-                createKhoa();
+            createKhoa();
         }
 
-        private bool validateForm()
+        public bool validateForm()
         {
             bool isValid = true;
             string MaKhoa = textEditMaKhoa.Text.Trim();
@@ -95,10 +94,13 @@ namespace student_learning_outcomes_management
 
             if (!isValid) return false;
             return true;
-        } 
+        }
 
-        private void createKhoa()
+        public bool createKhoa()
         {
+            if (!validateForm())
+                return false;
+
             bool isExistedRecord = data.tKhoas.Any(x => x.MaKhoa == textEditMaKhoa.Text.Trim());
 
             if (isExistedRecord)
@@ -120,6 +122,7 @@ namespace student_learning_outcomes_management
 
                 handleCancel();
             }
+            return !isExistedRecord;
         }
 
         private void gridView_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
@@ -138,14 +141,14 @@ namespace student_learning_outcomes_management
 
         private void barButtonItemUpdate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (validateForm())
-            {
-                updateKhoa();
-            }
+            updateKhoa();
         }
 
-        private void updateKhoa()
+        public bool updateKhoa()
         {
+            if (!validateForm())
+                return false;
+
             tKhoa k = data.tKhoas.FirstOrDefault(x => x.MaKhoa.Contains(textEditMaKhoa.Text.Trim()));
 
             k.TenKhoa = textEditTenKhoa.Text.Trim();
@@ -156,6 +159,8 @@ namespace student_learning_outcomes_management
             LoadData();
 
             handleCancel();
+
+            return true;
         }
 
         private void barButtonItemDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -199,6 +204,8 @@ namespace student_learning_outcomes_management
             barButtonItemAdd.Enabled = true;
             barButtonItemUpdate.Enabled = false;
             barButtonItemDelete.Enabled = false;
+
+            dxErrorProvider.ClearErrors();
         }
     }
 }

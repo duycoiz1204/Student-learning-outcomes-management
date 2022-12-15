@@ -65,11 +65,10 @@ namespace student_learning_outcomes_management
 
         private void barButtonItemAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (validateForm())
-                createMonHoc();
+            createMonHoc();
         }
 
-        private bool validateForm()
+        public bool validateForm()
         {
             bool isValid = true;
             string MaMonHoc = textEditMaMonHoc.Text.Trim();
@@ -109,8 +108,11 @@ namespace student_learning_outcomes_management
             return isValid;
         }
 
-        private void createMonHoc()
+        public bool createMonHoc()
         {
+            if (!validateForm())
+                return false;
+
             bool isExistedRecord = data.tMonHocs.Any(x => x.MaMonHoc == textEditMaMonHoc.Text.Trim());
 
             if (isExistedRecord)
@@ -132,15 +134,17 @@ namespace student_learning_outcomes_management
 
                 handleCancel();
             }
+            return !isExistedRecord;
         }
 
         private void barButtonItemUpdate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (validateForm())
-                updateMonHoc();
+            updateMonHoc();
         }
-        private void updateMonHoc()
+        public bool updateMonHoc()
         {
+            if (!validateForm())
+                return false;
             tMonHoc mh = data.tMonHocs.FirstOrDefault(x => x.MaMonHoc.Contains(textEditMaMonHoc.Text.Trim()));
 
             mh.TenMonHoc = textEditTenMonHoc.Text.Trim();
@@ -151,6 +155,7 @@ namespace student_learning_outcomes_management
             LoadData();
 
             handleCancel();
+            return true;
         }
         private void barButtonItemDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -193,6 +198,8 @@ namespace student_learning_outcomes_management
             barButtonItemAdd.Enabled = true;
             barButtonItemUpdate.Enabled = false;
             barButtonItemDelete.Enabled = false;
+
+            dxErrorProvider.ClearErrors();
         }
     }
 }
