@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "student_learning_outcomes_management", "student_learning_outcomes_management\student_learning_outcomes_management.csproj", "{A1152C63-6744-4929-B7B5-B0337635728C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "student_learning_outcomes_managementTests", "student_learning_outcomes_managementTests\student_learning_outcomes_managementTests.csproj", "{92CC4406-DBC2-4CC7-9918-BD1D1028A244}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A1152C63-6744-4929-B7B5-B0337635728C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1152C63-6744-4929-B7B5-B0337635728C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1152C63-6744-4929-B7B5-B0337635728C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92CC4406-DBC2-4CC7-9918-BD1D1028A244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92CC4406-DBC2-4CC7-9918-BD1D1028A244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92CC4406-DBC2-4CC7-9918-BD1D1028A244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92CC4406-DBC2-4CC7-9918-BD1D1028A244}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

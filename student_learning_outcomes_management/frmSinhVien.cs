@@ -23,6 +23,18 @@ namespace student_learning_outcomes_management
         {
             InitializeComponent();
         }
+        public frmSinhVien(String MSV, String ho, String ten, String BD, int phai, String sdt, String address, String khoa)
+        {
+            InitializeComponent();
+            this.textEditMaSinhVien.Text = MSV;
+            this.textEditHoSinhVien.Text = ho;
+            this.textEditTenSinhVien.Text = ten;
+            this.textEditNgaySinh.Text = BD;
+            this.radioGroupPhai.SelectedIndex = phai;
+            this.textEditDienThoai.Text = sdt;
+            this.textEditDiaChi.Text = address;
+            this.lookUpEditKhoa.EditValue = khoa;
+        }
 
         private void frmSinhVien_Load(object sender, EventArgs e)
         {
@@ -99,7 +111,7 @@ namespace student_learning_outcomes_management
                 createSinhVien();
         }
 
-        private bool validateForm()
+        public bool validateForm()
         {
             bool isValid = true;
             string MaSinhVien = textEditMaSinhVien.Text.Trim();

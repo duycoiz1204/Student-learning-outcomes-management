@@ -316,8 +316,8 @@
             this.cbx_HocVi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbx_HocVi.Properties.Items.AddRange(new object[] {
-            "Master",
-            "Doctor"});
+            "Tiến sĩ",
+            "Thạc sĩ"});
             this.cbx_HocVi.Size = new System.Drawing.Size(269, 22);
             this.cbx_HocVi.StyleController = this.layoutControl1;
             this.cbx_HocVi.TabIndex = 10;
@@ -348,6 +348,7 @@
             this.txtMaGV.Size = new System.Drawing.Size(269, 22);
             this.txtMaGV.StyleController = this.layoutControl1;
             this.txtMaGV.TabIndex = 4;
+            this.txtMaGV.EditValueChanged += new System.EventHandler(this.txtMaGV_EditValueChanged);
             // 
             // Root
             // 

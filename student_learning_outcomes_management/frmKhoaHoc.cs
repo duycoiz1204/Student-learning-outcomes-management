@@ -23,6 +23,15 @@ namespace student_learning_outcomes_management
         {
             InitializeComponent();
         }
+        public frmKhoaHoc(String makh,String magv, String mamh, String start, String end)
+        {
+            InitializeComponent();
+            this.txtMaKH.Text = makh;
+            this.cbx_GV.EditValue = magv;
+            this.cbx_MH.EditValue = mamh;
+            this.dtm_start.Text = start;
+            this.dtm_end.Text =end;
+        }
 
         private void frmKhoaHoc_Load(object sender, EventArgs e)
         {
@@ -132,7 +141,7 @@ namespace student_learning_outcomes_management
             }
             
         }
-        private Boolean handleError()
+        public Boolean handleError()
         {
             errorProvider.ClearErrors();
             bool isValid = true;
@@ -149,12 +158,12 @@ namespace student_learning_outcomes_management
                 errorProvider.SetError(txtMaKH, "Mã khóa học phải có 4 ký tự");
                 isValid = false;
             }
-            if (cbx_GV.Text.Trim().Length == 0)
+            if (cbx_GV.EditValue == "")
             {
                 errorProvider.SetError(cbx_GV, "Vui lòng chọn giáo viên cho khóa học");
                 isValid = false;
             }
-            if (cbx_MH.Text.Trim().Length == 0)
+            if (cbx_MH.EditValue == "")
             {
                 errorProvider.SetError(cbx_MH, "Vui lòng chọn môn học cho khóa học");
                 isValid = false;

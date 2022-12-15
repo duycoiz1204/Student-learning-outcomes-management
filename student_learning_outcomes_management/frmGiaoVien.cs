@@ -22,6 +22,16 @@ namespace student_learning_outcomes_management
         {
             InitializeComponent();
         }
+        public frmGiaoVien(String MGV, String TGV, String HV, String sdt, String MK)
+        {
+            InitializeComponent();
+            this.txtMaGV.Text = MGV;
+            this.txtTenGV.Text = TGV;
+            this.cbx_HocVi.EditValue = HV;
+            this.txtSDT.Text = sdt;
+            this.cbx_khoa.EditValue = MK;
+
+        }
 
         private void frmGiaoVien_Load(object sender, EventArgs e)
         {
@@ -70,7 +80,7 @@ namespace student_learning_outcomes_management
 
                 txtMaGV.Text = (sender as GridView).GetFocusedRowCellValue("MaGiaoVien").ToString().Trim();
                 txtTenGV.Text = (sender as GridView).GetFocusedRowCellValue("TenGiaoVien").ToString().Trim();
-                cbx_HocVi.Text = (sender as GridView).GetFocusedRowCellValue("HocVi").ToString().Trim();
+                cbx_HocVi.EditValue = (sender as GridView).GetFocusedRowCellValue("HocVi").ToString().Trim();
                 txtSDT.Text = (sender as GridView).GetFocusedRowCellValue("SoDienThoai").ToString().Trim();
                 cbx_khoa.EditValue = (sender as GridView).GetFocusedRowCellValue("MaKhoa").ToString().Trim();
 
@@ -84,13 +94,23 @@ namespace student_learning_outcomes_management
         }
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            AddGV();
+
+
+        }
+        public Boolean AddGV()
+        {
             errorProvider.ClearErrors();
             if (handleError())
             {
-                bool flag = data.tGiaoViens.Any(x => x.MaGiaoVien == txtMaGV.Text.Trim());
+                bool flag;
+                
+                    flag = data.tGiaoViens.Any(x => x.MaGiaoVien == txtMaGV.Text.Trim());
+                
                 if (flag)
                 {
                     MessageBox.Show("Đã tồn tại giáo viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
                 }
                 else
                 {
@@ -101,23 +121,23 @@ namespace student_learning_outcomes_management
                         HocVi = cbx_HocVi.Text.Trim(),
                         SoDienThoai = txtSDT.Text.Trim(),
                         MaKhoa = cbx_khoa.EditValue.ToString().Trim()
-                };
+                    };
                     data.tGiaoViens.Add(gv);
                     data.SaveChanges();
                     MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadData();
                     handleCancel();
+                    return true;
                 }
             }
-
-
+            else return false;
         }
-        private Boolean handleError()
+        public Boolean handleError()
         {
             string MaGV = txtMaGV.Text.Trim();
             string TenGV = txtTenGV.Text.Trim();
-            string Khoa = cbx_khoa.Text.Trim();
-            string HV = cbx_HocVi.Text.Trim();
+            string Khoa = cbx_khoa.EditValue.ToString().Trim();
+            string HV = cbx_HocVi.EditValue.ToString().Trim();
             string SDT = txtSDT.Text.Trim();
             bool isValid = true;
             if (MaGV.Length == 0)
@@ -160,6 +180,10 @@ namespace student_learning_outcomes_management
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            updateGV();
+        }
+        public Boolean updateGV()
+        {
             errorProvider.ClearErrors();
             if (handleError())
             {
@@ -171,8 +195,11 @@ namespace student_learning_outcomes_management
                 data.SaveChanges();
                 LoadData();
                 handleCancel();
+                return true;
             }
+            else return false;
         }
+
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -222,6 +249,11 @@ namespace student_learning_outcomes_management
             btnDelete.Enabled = false;
             btn_update.Enabled = false;
             btnAdd.Enabled = true;
+        }
+
+        private void txtMaGV_EditValueChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
