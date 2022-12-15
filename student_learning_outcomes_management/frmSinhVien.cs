@@ -145,6 +145,12 @@ namespace student_learning_outcomes_management
                 dxErrorProvider.SetError(radioGroupPhai, "Vui lòng chọn phái");
                 isValid = false;
             }
+            if (DienThoai.Length != 10)
+            {
+                dxErrorProvider.SetError(textEditDienThoai, "Vui lòng nhập đúng số điện thoại");
+                isValid = false;
+
+            }
             Regex regexPhone = new Regex(@"^0\d{9,10}$");
             if (!regexPhone.IsMatch(DienThoai))
             {
@@ -194,7 +200,6 @@ namespace student_learning_outcomes_management
                 {
                     MSSV = k + year + "0" + stt;
                 }
-
                 tSinhVien sv = new tSinhVien
                 {
                     MaSinhVien = MSSV,
@@ -211,6 +216,7 @@ namespace student_learning_outcomes_management
                 LoadData();
 
                 handleCancel();
+                MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -268,6 +274,7 @@ namespace student_learning_outcomes_management
 
         private void handleCancel()
         {
+            dxErrorProvider.ClearErrors();
             textEditMaSinhVien.Text = "";
             textEditHoSinhVien.Text = "";
             textEditTenSinhVien.Text = "";

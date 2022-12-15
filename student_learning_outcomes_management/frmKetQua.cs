@@ -280,11 +280,60 @@ namespace student_learning_outcomes_management
 
         private void txtMaSV_EditValueChanged_1(object sender, EventArgs e)
         {
-            
+            if (isSearch)
+            {
+                List<tKetQua> search = data.tKetQuas.Where(q => q.MaSinhVien.Contains(txtMaSV.Text) == true).ToList();
+                int i = 0;
+                var column = from t in search
+                             select new
+                             {
+                                 No = ++i,
+                                 MaSinhVien = t.MaSinhVien.Trim(),
+                                 TenSinhVien = t.tSinhVien.HoSinhVien.Trim() + " " + t.tSinhVien.TenSinhVien.Trim(),
+                                 MaKhoaHoc = t.MaKhoaHoc.Trim(),
+                                 MonHoc = t.tKhoaHoc.tMonHoc.TenMonHoc.Trim(),
+                                 Diem = t.Diem,
+                                 LanThi = t.LanThi
+                             };
+                gridControl1.DataSource = column;
+            }
+
+
+            tSinhVien sv = data.tSinhViens.FirstOrDefault(q => q.MaSinhVien == txtMaSV.Text);
+            existStudent = sv != null;
+
+            if (existStudent)
+            {
+                student_name.Text = sv.HoSinhVien + " " + sv.TenSinhVien;
+                student_name.ForeColor = Color.Black;
+                student_address.Text = sv.DiaChi;
+                student_birthday.Text = sv.NgaySinh.ToString();
+                student_falcuty.Text = sv.tKhoa.TenKhoa;
+
+            }
+            else
+            {
+                student_name.Text = "Mã sinh viên chưa đúng!";
+                student_name.ForeColor = Color.Red;
+            }
         }
 
         private void txtMaKH_EditValueChanged_1(object sender, EventArgs e)
         {
+            
+              tKhoaHoc kh = data.tKhoaHocs.FirstOrDefault(q => q.MaKhoaHoc == txtMaKH.Text.Trim());
+            if (kh != null)
+            {
+                course.Text = txtMaKH.Text;
+                course.ForeColor = Color.Black;
+                existCourse = true;
+            }
+            else
+            {
+                course.ForeColor = Color.Red;
+                course.Text = "Không có khóa học này!";
+                existCourse = false;
+            }
         }
     }
 }
