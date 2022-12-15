@@ -161,6 +161,7 @@ namespace student_learning_outcomes_management
         private void cbx_khoa_SelectedIndexChanged(object sender, EventArgs e)
         {
             string k = cbx_khoa.SelectedValue == null ? "" : cbx_khoa.SelectedValue.ToString().Trim();
+            isLoop2 = false; isLoop1 = false;
             load_cbx_gv(k, 1);
             load_cbx_mh(k, 1);
             load_cbx_kh(k, 1);
@@ -170,10 +171,11 @@ namespace student_learning_outcomes_management
         {
             if (isLoop1)
             {
+                isLoop2 = false;
                 string k = cbx_mh.SelectedValue == null ? "" : cbx_mh.SelectedValue.ToString().Trim();
                 load_cbx_gv(k, 2);
                 load_cbx_kh(k, 3);
-                isLoop1 = false;
+                
             }
             else
             {
@@ -185,10 +187,11 @@ namespace student_learning_outcomes_management
         {
             if (isLoop2)
             {
+                isLoop1 = false;
                 string k = cbx_gv.SelectedValue == null ? "" : cbx_gv.SelectedValue.ToString().Trim();
                 load_cbx_mh(k, 2);
                 load_cbx_kh(k, 2);
-                isLoop2 = false;
+                
             }
             else
             {

@@ -73,6 +73,7 @@
             this.Controls.Add(this.documentViewer1);
             this.Name = "frmReportBangDiemKhoaHoc";
             this.Text = "Bảng điểm khóa học";
+            this.Load += new System.EventHandler(this.frmReportBangDiemKhoaHoc_Load);
             this.ResumeLayout(false);
 
         }

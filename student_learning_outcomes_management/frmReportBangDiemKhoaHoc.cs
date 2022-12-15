@@ -21,7 +21,7 @@ namespace student_learning_outcomes_management
         {
             InitializeComponent();
             rpt = new BangDiemKhoaHoc();
-            List<tKetQua> l = data.tKetQuas.ToList<tKetQua>();
+            List<tKetQua> l = data.tKetQuas.Where(q=> q.MaKhoaHoc == mkh).ToList<tKetQua>();
             var column = from t in l
                          select new
                          {
@@ -58,6 +58,11 @@ namespace student_learning_outcomes_management
         {
             ReportPrintTool tool = new ReportPrintTool(rpt);
             tool.PrintDialog();
+        }
+
+        private void frmReportBangDiemKhoaHoc_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
