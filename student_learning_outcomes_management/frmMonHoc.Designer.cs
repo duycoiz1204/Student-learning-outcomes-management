@@ -460,7 +460,6 @@
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraGrid.GridControl gridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView;
-        private DevExpress.XtraEditors.TextEdit textEditMaMonHoc;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItemMaMonHoc;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
@@ -474,13 +473,14 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItemUpdate;
         private DevExpress.XtraBars.BarButtonItem barButtonItemDelete;
         private DevExpress.XtraBars.BarButtonItem barButtonItemCancel;
-        private DevExpress.XtraEditors.TextEdit textEditSoTietThucHanh;
-        private DevExpress.XtraEditors.TextEdit textEditSoTietLyThuyet;
-        private DevExpress.XtraEditors.TextEdit textEditTenMonHoc;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider;
+        public DevExpress.XtraEditors.TextEdit textEditMaMonHoc;
+        public DevExpress.XtraEditors.TextEdit textEditSoTietThucHanh;
+        public DevExpress.XtraEditors.TextEdit textEditSoTietLyThuyet;
+        public DevExpress.XtraEditors.TextEdit textEditTenMonHoc;
     }
 }

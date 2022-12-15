@@ -60,6 +60,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="frmKhoaTests.cs" />
+    <Compile Include="frmMonHocTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
