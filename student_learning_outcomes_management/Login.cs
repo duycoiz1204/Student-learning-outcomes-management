@@ -39,15 +39,17 @@ namespace student_learning_outcomes_management
             Boolean isValid = true;
             if (txt_username.Text.Length == 0)
             {
+                MessageBox.Show("Vui lòng nhập tên đăng nhập!");
                 errorProvider.SetError(txt_username, "Vui lòng nhập tên đăng nhập!");
                 isValid = false;
             }
-            if (txt_pass.Text.Length == 0)
+            else if (txt_pass.Text.Length == 0)
             {
+                MessageBox.Show("Vui lòng nhập mật khẩu!");
                 errorProvider.SetError(txt_username, "Vui lòng nhập mật khẩu!");
                 isValid = false;
             }
-            if (isValid)
+            else if (isValid)
             {
                 if(db.tAccounts.Any(q => q.TaiKhoan.Trim()==txt_username.Text.Trim() && q.MatKhau.Trim() == txt_pass.Text.Trim()))
                 {
@@ -71,6 +73,11 @@ namespace student_learning_outcomes_management
         }
 
         private void pictureEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
         {
 
         }
